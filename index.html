@@ -62,7 +62,7 @@
                 }
 
             });
-            cy.on('click', 'node', function (e) {
+            cy.on('tap', 'node', function (e) {
                 window.open(cy.getElementById(this.id()).data('url'));
             });
         });
