@@ -3,42 +3,48 @@
     "data": {
       "id": "https://opentutorials.org/course/3084",
       "url": "https://opentutorials.org/course/3084",
-      "label": "HTML & Internet"
+      "label": "WEB1-HTML&Internet",
+      "depth": 1
     }
   },
   {
     "data": {
       "id": "https://opentutorials.org/course/3086",
       "url": "https://opentutorials.org/course/3086",
-      "label": "CSS"
+      "label": "CSS",
+      "depth": 2
     }
   },
   {
     "data": {
       "id": "https://opentutorials.org/course/3085",
       "url": "https://opentutorials.org/course/3085",
-      "label": "JavaScript"
+      "label": "JavaScript",
+      "depth": 2
     }
   },
   {
     "data": {
       "id": "https://opentutorials.org/course/3130",
       "url": "https://opentutorials.org/course/3130",
-      "label": "PHP"
+      "label": "PHP",
+      "depth": 2
     }
   },
   {
     "data": {
       "id": "https://opentutorials.org/course/3162",
       "url": "https://opentutorials.org/course/3162",
-      "label": "DATABASE1"
+      "label": "DATABASE1",
+      "depth": 1
     }
   },
   {
     "data": {
       "id": "https://opentutorials.org/course/3161",
       "url": "https://opentutorials.org/course/3161",
-      "label": "MySQL"
+      "label": "MySQL",
+      "depth": 2
     }
   },
   {
