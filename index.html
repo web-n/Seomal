@@ -1,0 +1,70 @@
+<html>
+<head>
+    <style>
+        #cy {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
+    <script src="cytoscape.js"></script>
+    <script src="cytoscape-cose-bilkent.js"></script>
+</head>
+<body>
+<div id="cy"></div>
+<script>
+    fetch('data.json', {mode: 'no-cors'})
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+            var cy = cytoscape({
+
+                container: document.getElementById('cy'), // container to render in
+
+                elements: data,
+
+                style: [ // the stylesheet for the graph
+                    {
+                        selector: 'node',
+                        style: {
+                            'background-color': 'black',
+                            'label': 'data(label)',
+                            'width': 20,
+                            'height': 20
+                        }
+                    },
+                    {
+                        selector: 'edge',
+                        style: {
+                            'curve-style': 'bezier',
+                            'width': 1,
+                            'target-arrow-shape': 'triangle',
+                            'line-color': '#2D2D2D',
+                            'target-arrow-color': '#2D2D2D'
+                        }
+                    }
+                ],
+
+                layout: {
+                    name: 'cose-bilkent',
+                    animate: false,
+                    gravityRangeCompound: 1.5,
+                    fit: true,
+                    idealEdgeLength: 100,
+
+                    tile: true,
+
+                }
+
+            });
+            cy.on('click', 'node', function (e) {
+                window.open(cy.getElementById(this.id()).data('url'));
+            });
+        });
+
+
+</script>
+</body>
+</html>

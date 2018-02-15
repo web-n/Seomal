@@ -1,0 +1,72 @@
+[
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3084",
+      "url": "https://opentutorials.org/course/3084",
+      "label": "HTML & Internet"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3086",
+      "url": "https://opentutorials.org/course/3086",
+      "label": "CSS"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3085",
+      "url": "https://opentutorials.org/course/3085",
+      "label": "JavaScript"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3130",
+      "url": "https://opentutorials.org/course/3130",
+      "label": "PHP"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3162",
+      "url": "https://opentutorials.org/course/3162",
+      "label": "DATABASE1"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3161",
+      "url": "https://opentutorials.org/course/3161",
+      "label": "MySQL"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3086-https://opentutorials.org/course/3084",
+      "source": "https://opentutorials.org/course/3086",
+      "target": "https://opentutorials.org/course/3084"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3085-https://opentutorials.org/course/3084",
+      "source": "https://opentutorials.org/course/3085",
+      "target": "https://opentutorials.org/course/3084"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3130-https://opentutorials.org/course/3084",
+      "source": "https://opentutorials.org/course/3130",
+      "target": "https://opentutorials.org/course/3084"
+    }
+  },
+  {
+    "data": {
+      "id": "https://opentutorials.org/course/3161-https://opentutorials.org/course/3162",
+      "source": "https://opentutorials.org/course/3161",
+      "target": "https://opentutorials.org/course/3162"
+    }
+  }
+]
