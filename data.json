@@ -1,7 +1,7 @@
 [
   {
     "data": {
-      "id": "1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3",
+      "id": "WEB1",
       "url": "https://opentutorials.org/course/3084",
       "label": "WEB1-HTML&Internet",
       "depth": 1
@@ -9,7 +9,7 @@
   },
   {
     "data": {
-      "id": "ca803798b81de25b2aba9884064460fd10e398c1",
+      "id": "WEB2CSS",
       "url": "https://opentutorials.org/course/3086",
       "label": "CSS",
       "depth": 2
@@ -17,7 +17,7 @@
   },
   {
     "data": {
-      "id": "000ef88292f2498ece5fe67f09b3dd31ea4d13ae",
+      "id": "WEB2JAVASCRIPT",
       "url": "https://opentutorials.org/course/3085",
       "label": "JavaScript",
       "depth": 2
@@ -25,7 +25,7 @@
   },
   {
     "data": {
-      "id": "287f06de071a4f4b45dd0e12aabc779cbb5acc4e",
+      "id": "WEB2PHP",
       "url": "https://opentutorials.org/course/3130",
       "label": "PHP",
       "depth": 2
@@ -33,7 +33,7 @@
   },
   {
     "data": {
-      "id": "f74718b3ab90c3e3ba32ca03db67796ae598554b",
+      "id": "DATABASE1",
       "url": "https://opentutorials.org/course/3162",
       "label": "DATABASE1",
       "depth": 1
@@ -41,7 +41,7 @@
   },
   {
     "data": {
-      "id": "e98316cf110bcae5971a7275f8b5e7e2e65ba333",
+      "id": "DATABASE2MYSQL",
       "url": "https://opentutorials.org/course/3161",
       "label": "MySQL",
       "depth": 2
@@ -49,7 +49,7 @@
   },
   {
     "data": {
-      "id": "1a8331ef6b3d1b6fab924870e3340ea61786a6d1",
+      "id": "DATABASE3PHPNMYSQL",
       "url": "https://opentutorials.org/course/3167",
       "label": "PHP & MySQL",
       "depth": 3
@@ -57,44 +57,44 @@
   },
   {
     "data": {
-      "id": "ca803798b81de25b2aba9884064460fd10e398c1-1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3",
-      "source": "ca803798b81de25b2aba9884064460fd10e398c1",
-      "target": "1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3"
+      "id": "WEB2CSS-WEB1",
+      "source": "WEB2CSS",
+      "target": "WEB1"
     }
   },
   {
     "data": {
-      "id": "000ef88292f2498ece5fe67f09b3dd31ea4d13ae-1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3",
-      "source": "000ef88292f2498ece5fe67f09b3dd31ea4d13ae",
-      "target": "1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3"
+      "id": "WEB2JAVASCRIPT-WEB1",
+      "source": "WEB2JAVASCRIPT",
+      "target": "WEB1"
     }
   },
   {
     "data": {
-      "id": "287f06de071a4f4b45dd0e12aabc779cbb5acc4e-1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3",
-      "source": "287f06de071a4f4b45dd0e12aabc779cbb5acc4e",
-      "target": "1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3"
+      "id": "WEB2PHP-WEB1",
+      "source": "WEB2PHP",
+      "target": "WEB1"
     }
   },
   {
     "data": {
-      "id": "e98316cf110bcae5971a7275f8b5e7e2e65ba333-f74718b3ab90c3e3ba32ca03db67796ae598554b",
-      "source": "e98316cf110bcae5971a7275f8b5e7e2e65ba333",
-      "target": "f74718b3ab90c3e3ba32ca03db67796ae598554b"
+      "id": "DATABASE2MYSQL-DATABASE1",
+      "source": "DATABASE2MYSQL",
+      "target": "DATABASE1"
     }
   },
   {
     "data":{
-      "id": "1a8331ef6b3d1b6fab924870e3340ea61786a6d1-1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3",
-      "source": "1a8331ef6b3d1b6fab924870e3340ea61786a6d1",
-      "target": "1f0a44fb55310dd6f5b83d0ebc2f96a7e38276f3"
+      "id": "DATABASE3PHPNMYSQL-WEB1",
+      "source": "DATABASE3PHPNMYSQL",
+      "target": "WEB2PHP"
     }
   },
   {
     "data":{
-      "id": "1a8331ef6b3d1b6fab924870e3340ea61786a6d1-e98316cf110bcae5971a7275f8b5e7e2e65ba333",
-      "source": "1a8331ef6b3d1b6fab924870e3340ea61786a6d1",
-      "target": "e98316cf110bcae5971a7275f8b5e7e2e65ba333"
+      "id": "DATABASE3PHPNMYSQL-DATABASE2MYSQL",
+      "source": "DATABASE3PHPNMYSQL",
+      "target": "DATABASE2MYSQL"
     }
   }
 ]
