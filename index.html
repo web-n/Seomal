@@ -21,6 +21,15 @@
 <body>
 <div id="cy"></div>
 <script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
     fetch('data.json', {mode: 'no-cors'})
         .then(function (res) {
             return res.json();
@@ -57,6 +66,15 @@
                             'target-arrow-color': 'black',
                             'opacity':0.9
                         }
+                    },
+                    {
+                      selector: '#'+getParameterByName('i'),
+                      style:{
+                        'background-color': 'red',
+                        'color': 'white',
+                        'text-outline-color': 'red'
+
+                      }
                     }
                 ],
 
@@ -67,13 +85,12 @@
                     fit: true,
                     idealEdgeLength: 100,
                     tile: true
-
                 }
-
             });
             cy.on('tap', 'node', function (e) {
                 window.open(cy.getElementById(this.id()).data('url'));
             });
+            cy.userPanningEnabled( false );
         });
         function debouncer( func , timeout ) {
            var timeoutID , timeout = timeout || 200;
@@ -88,7 +105,9 @@
         $(window).resize(debouncer(function(){
           cy.fit()
         }))
-
+        $(window).mousedown(function(){
+          cy.userPanningEnabled(true)
+        })
 </script>
 </body>
 </html>
