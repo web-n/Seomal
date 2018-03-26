@@ -58,9 +58,24 @@
   {
     "data": {
       "id": "WEB2PYTHON",
-      "url": "https://opentutorials.org/module/3357",
+      "url": "https://opentutorials.org/course/3256",
       "label": "Python",
       "depth": 2
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2HOME-SERVER",
+      "url": "https://opentutorials.org/course/3265",
+      "label": "Home server",
+      "depth": 2
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2HOMESERVER-WEB1",
+      "source": "WEB2HOME-SERVER",
+      "target": "WEB1"
     }
   },
   {
