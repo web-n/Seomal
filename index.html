@@ -13,6 +13,10 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
     <script src="cytoscape.js"></script>
     <script src="cytoscape-cose-bilkent.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="cy"></div>
@@ -71,7 +75,19 @@
                 window.open(cy.getElementById(this.id()).data('url'));
             });
         });
-
+        function debouncer( func , timeout ) {
+           var timeoutID , timeout = timeout || 200;
+           return function () {
+              var scope = this , args = arguments;
+              clearTimeout( timeoutID );
+              timeoutID = setTimeout( function () {
+                  func.apply( scope , Array.prototype.slice.call( args ) );
+              } , timeout );
+           }
+        }
+        $(window).resize(debouncer(function(){
+          cy.fit()
+        }))
 
 </script>
 </body>
