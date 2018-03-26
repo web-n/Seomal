@@ -49,7 +49,7 @@
   },
   {
     "data": {
-      "id": "DATABASE3PHPNMYSQL",
+      "id": "WEB3PHP-MYSQL",
       "url": "https://opentutorials.org/course/3167",
       "label": "PHP & MySQL",
       "depth": 3
@@ -115,15 +115,15 @@
   },
   {
     "data":{
-      "id": "DATABASE3PHPNMYSQL-WEB1",
-      "source": "DATABASE3PHPNMYSQL",
+      "id": "WEB3PHP-MYSQL-WEB1",
+      "source": "WEB3PHP-MYSQL",
       "target": "WEB2PHP"
     }
   },
   {
     "data":{
-      "id": "DATABASE3PHPNMYSQL-DATABASE2MYSQL",
-      "source": "DATABASE3PHPNMYSQL",
+      "id": "WEB3PHP-MYSQL-DATABASE2MYSQL",
+      "source": "WEB3PHP-MYSQL",
       "target": "DATABASE2MYSQL"
     }
   }
