@@ -90,7 +90,7 @@
             });
             cy.on('tap', 'node', function (e) {
 		var url = cy.getElementById(this.id()).data('url');
-	        ga('send', 'event', 'Node', 'Click', 'destination', url)	
+	        ga('send', 'event', 'Node', 'Click', this.id()+' '+url)	
                 window.open(url);
             });
             cy.userPanningEnabled( false );
