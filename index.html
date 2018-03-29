@@ -89,7 +89,9 @@
                 }
             });
             cy.on('tap', 'node', function (e) {
-                window.open(cy.getElementById(this.id()).data('url'));
+		var url = cy.getElementById(this.id()).data('url');
+	        ga('send', 'event', 'Node', 'Click', 'destination', url)	
+                window.open(url);
             });
             cy.userPanningEnabled( false );
         });
