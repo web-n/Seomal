@@ -2,6 +2,14 @@
 <head>
     <title>SerieseN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80887304-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-80887304-4');
+    </script>
     <style>
         body{
             background-color: white;
@@ -92,7 +100,11 @@
             });
             cy.on('tap', 'node', function (e) {
 		var url = cy.getElementById(this.id()).data('url');
-	        ga('send', 'event', 'Node', 'Click', this.id()+' '+url)	
+		gtag('event', 'Click', {
+		  'event_category': 'node',
+		  'event_label': this.id(),
+		  'value': 1
+		});
                 window.open(url);
             });
             cy.userPanningEnabled( false );
@@ -113,15 +125,6 @@
         $(document).one('touchstart click', function(){
           cy.userPanningEnabled(true)
         })
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80887304-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-80887304-4');
 </script>
 </body>
 </html>
