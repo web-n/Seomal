@@ -73,6 +73,21 @@
   },
   {
     "data": {
+      "id": "WEB2DNS",
+      "url": "https://opentutorials.org/course/3276",
+      "label": "Domain Name System",
+      "depth": 2
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2DNS-WEB1",
+      "source": "WEB2DNS",
+      "target": "WEB1"
+    }
+  },
+  {
+    "data": {
       "id": "WEB2HOMESERVER-WEB1",
       "source": "WEB2HOME-SERVER",
       "target": "WEB1"
