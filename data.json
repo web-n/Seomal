@@ -81,6 +81,14 @@
   },
   {
     "data": {
+      "id": "WEB3AJAX",
+      "url": "https://opentutorials.org/course/3281",
+      "label": "Ajax",
+      "depth": 3
+    }
+  },
+  {
+    "data": {
       "id": "WEB2DNS-WEB1",
       "source": "WEB2DNS",
       "target": "WEB1"
@@ -140,6 +148,13 @@
       "id": "WEB3PHP-MYSQL-DATABASE2MYSQL",
       "source": "WEB3PHP-MYSQL",
       "target": "DATABASE2MYSQL"
+    }
+  },
+  {
+    "data":{
+      "id": "WEB2JAVASCRIPT-WEB3AJAX",
+      "source": "WEB3AJAX",
+      "target": "WEB2JAVASCRIPT"
     }
   }
 ]
