@@ -26,7 +26,7 @@
 
     {
         "data": {
-            "id": "whooing",
+            "id": "WHOOING",
             "url": "https://opentutorials.org/module/3505",
             "label": "후잉",
             "depth": 3
@@ -35,7 +35,7 @@
     {
         "data":{
             "id": "SW-whooing",
-            "source": "whooing",
+            "source": "WHOOING",
             "target": "SW"
         }
     },
