@@ -1,0 +1,223 @@
+[
+    {
+        "data": {
+            "id": "1",
+            "url": "https://opentutorials.org/module/3483",
+            "label": "회계1",
+            "depth": 1
+        }
+    },
+
+    {
+        "data": {
+            "id": "SW",
+            "label": "회계 소프트웨어",
+            "url": "",
+            "depth": 2
+        }
+    },
+    {
+        "data":{
+            "id": "1-SW",
+            "source": "SW",
+            "target": "1"
+        }
+    },
+
+    {
+        "data": {
+            "id": "whooing",
+            "url": "https://opentutorials.org/module/3505",
+            "label": "후잉",
+            "depth": 3
+        }
+    },
+    {
+        "data":{
+            "id": "SW-whooing",
+            "source": "whooing",
+            "target": "SW"
+        }
+    },
+
+    {
+        "data": {
+            "id": "NAVER-WORKPLACE",
+            "url": "https://opentutorials.org/module/3506",
+            "label": "Naver workplace",
+            "depth": 3
+        }
+    },
+    {
+        "data":{
+            "id": "SW-NAVER-WORKPLACE",
+            "source": "NAVER-WORKPLACE",
+            "target": "SW"
+        }
+    }
+
+    ,{
+        "data": {
+            "id": "EXCEL",
+            "url": "",
+            "label": "엑셀(준비중)",
+            "depth": 3,
+            "selectable": false
+        },
+      "classes": "prepare"
+    },
+    {
+        "data":{
+            "id": "SW-EXCEL",
+            "source": "EXCEL",
+            "target": "SW"
+        },
+      "classes": "prepare"
+    },
+
+    {
+        "data": {
+            "id": "ACCOUNT",
+            "url": "",
+            "label": "계정(준비중)",
+            "depth": 2
+        },
+      "classes": "prepare"
+    },
+    {
+        "data":{
+            "id": "1-ACCOUNT",
+            "source": "ACCOUNT",
+            "target": "1"
+        },
+      "classes": "prepare"
+    },
+
+    {
+        "data": {
+            "id": "CREDITCARD",
+            "url": "",
+            "label": "신용카드(준비중)",
+            "depth": 3
+        },
+      "classes": "prepare"
+    },
+    {
+        "data":{
+            "id": "ACCOUNT-CREDITCARD",
+            "source": "CREDITCARD",
+            "target": "ACCOUNT"
+        },
+      "classes": "prepare"
+    },
+
+    {
+        "data": {
+            "id": "INSURANCE",
+            "url": "",
+            "label": "보험(준비중)",
+            "depth": 3
+        },
+      "classes": "prepare"
+    },
+    {
+        "data":{
+            "id": "ACCOUNT-INSURANCE",
+            "source": "INSURANCE",
+            "target": "ACCOUNT"
+        },
+      "classes": "prepare"
+    }
+
+    ,{
+        "data": {
+            "id": "CREDIT-ACCOUNT",
+            "url": "",
+            "label": "외상(준비중)",
+            "depth": 3
+        },
+  "classes": "prepare"
+    },
+    {
+        "data":{
+            "id": "ACCOUNT-CREDIT-ACCOUNT",
+            "source": "CREDIT-ACCOUNT",
+            "target": "ACCOUNT"
+        },
+      "classes": "prepare"
+    }
+
+    ,{
+    "data": {
+        "id": "PAY",
+        "url": "",
+        "label": "임금&급여(준비중)",
+        "depth": 3
+    },
+  "classes": "prepare"
+},
+    {
+        "data":{
+            "id": "ACCOUNT-PAY",
+            "source": "PAY",
+            "target": "ACCOUNT"
+        },
+      "classes": "prepare"
+    }
+
+  ,{
+      "data": {
+          "id": "STATEMENT",
+          "url": "",
+          "label": "재무제표(준비중)",
+          "depth": 2
+      },
+  "classes": "prepare"
+  },
+    {
+        "data":{
+            "id": "1-STATEMENT",
+            "source": "STATEMENT",
+            "target": "1"
+        },
+      "classes": "prepare"
+    }
+
+  ,{
+    "data": {
+      "id": "CLOSING",
+      "url": "",
+      "label": "결산(준비중)",
+      "depth": 3
+    },
+  "classes": "prepare"
+  },
+  {
+    "data":{
+      "id": "STATEMENT-CLOSING",
+      "source": "CLOSING",
+      "target": "STATEMENT"
+    },
+    "classes": "prepare"
+  }
+
+  ,{
+    "data": {
+      "id": "ANALYSIS",
+      "url": "",
+      "label": "재무제표 분석법(준비중)",
+      "depth": 3
+    },
+  "classes": "prepare"
+  },
+  {
+    "data":{
+      "id": "STATEMENT-ANALYSIS",
+      "source": "ANALYSIS",
+      "target": "STATEMENT"
+    },
+    "classes": "prepare"
+  }
+
+
+]
