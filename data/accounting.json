@@ -78,11 +78,10 @@
     {
         "data": {
             "id": "ACCOUNT",
-            "url": "",
-            "label": "계정(준비중)",
+            "url": "https://opentutorials.org/module/3528",
+            "label": "계정과목",
             "depth": 2
-        },
-      "classes": "prepare"
+        }
     },
     {
         "data":{
