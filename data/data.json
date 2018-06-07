@@ -25,6 +25,14 @@
   },
   {
     "data": {
+      "id": "WEB2NODEJS",
+      "url": "https://opentutorials.org/course/3332",
+      "label": "Node.js",
+      "depth": 2
+    }
+  },
+  {
+    "data": {
       "id": "WEB2PHP",
       "url": "https://opentutorials.org/course/3130",
       "label": "PHP",
@@ -112,6 +120,13 @@
     "data": {
       "id": "WEB2JAVASCRIPT-WEB1",
       "source": "WEB2JAVASCRIPT",
+      "target": "WEB1"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2NODEJS-WEB1",
+      "source": "WEB2NODEJS",
       "target": "WEB1"
     }
   },
