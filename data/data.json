@@ -97,6 +97,14 @@
   },
   {
     "data": {
+      "id": "NODEJS-MYSQL",
+      "url": "https://opentutorials.org/module/3560",
+      "label": "Ajax",
+      "depth": 3
+    }
+  },
+  {
+    "data": {
       "id": "WEB2DNS-WEB1",
       "source": "WEB2DNS",
       "target": "WEB1"
@@ -170,6 +178,20 @@
       "id": "WEB2JAVASCRIPT-WEB3AJAX",
       "source": "WEB3AJAX",
       "target": "WEB2JAVASCRIPT"
+    }
+  },
+  {
+    "data":{
+      "id": "MYSQL-NODEJS-WEB2NODEJS",
+      "source": "NODEJS-MYSQL",
+      "target": "WEB2NODEJS"
+    }
+  },
+  {
+    "data":{
+      "id": "MYSQL-NODEJS-MYSQL",
+      "source": "NODEJS-MYSQL",
+      "target": "DATABASE2MYSQL"
     }
   }
 ]
