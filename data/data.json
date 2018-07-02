@@ -105,6 +105,21 @@
   },
   {
     "data": {
+      "id": "WEB3-Express",
+      "url": "https://opentutorials.org/module/3590",
+      "label": "Express",
+      "depth": 3
+    }
+  },
+  {
+    "data": {
+      "id": "WEB3-Express-WEB2NODEJS",
+      "source": "WEB3-Express",
+      "target": "WEB2NODEJS"
+    }
+  },
+  {
+    "data": {
       "id": "WEB2DNS-WEB1",
       "source": "WEB2DNS",
       "target": "WEB1"
