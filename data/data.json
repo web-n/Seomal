@@ -113,6 +113,21 @@
   },
   {
     "data": {
+      "id": "WEB2-HTTP",
+      "url": "https://opentutorials.org/module/3621",
+      "label": "HTTP",
+      "depth": 2
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2-HTTP-WEB1",
+      "source": "WEB2-HTTP",
+      "target": "WEB1"
+    }
+  },
+  {
+    "data": {
       "id": "WEB3-Express-WEB2NODEJS",
       "source": "WEB3-Express",
       "target": "WEB2NODEJS"
