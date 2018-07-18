@@ -125,13 +125,6 @@
       "label":"HTTP",
       "depth":2
     }
-  },
-  {
-    "data":{
-      "id": "FRONTEND",
-      "label":"Front end",
-      "depth":2
-    }
   }
   ,{
     "data": {
@@ -172,20 +165,13 @@
     "data": {
       "id": "WEB2CSS-WEB1",
       "source": "WEB2CSS",
-      "target": "FRONTEND"
+      "target": "WEB1"
     }
   },
   {
     "data": {
       "id": "WEB2JAVASCRIPT-WEB1",
       "source": "WEB2JAVASCRIPT",
-      "target": "FRONTEND"
-    }
-  },
-  {
-    "data": {
-      "id": "FRONTEND-WEB1",
-      "source": "FRONTEND",
       "target": "WEB1"
     }
   },
