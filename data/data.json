@@ -112,6 +112,21 @@
     }
   },
   {
+    "data":{
+      "id": "NETWORK",
+      "label":"Network",
+      "depth":2
+    }
+  },
+  {
+    "data":{
+      "id": "HTTP",
+      "url":"https://opentutorials.org/module/3621",
+      "label":"HTTP",
+      "depth":2
+    }
+  }
+  ,{
     "data": {
       "id": "WEB3-Express-WEB2NODEJS",
       "source": "WEB3-Express",
@@ -122,6 +137,20 @@
     "data": {
       "id": "WEB2DNS-WEB1",
       "source": "WEB2DNS",
+      "target": "NETWORK"
+    }
+  },
+  {
+    "data": {
+      "id": "NETWORK-HTTP",
+      "source": "HTTP",
+      "target": "NETWORK"
+    }
+  },
+  {
+    "data": {
+      "id": "NETWORK-WEB1",
+      "source": "NETWORK",
       "target": "WEB1"
     }
   },
@@ -129,7 +158,7 @@
     "data": {
       "id": "WEB2HOMESERVER-WEB1",
       "source": "WEB2HOME-SERVER",
-      "target": "WEB1"
+      "target": "NETWORK"
     }
   },
   {
