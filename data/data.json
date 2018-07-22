@@ -121,6 +121,28 @@
   },
   {
     "data": {
+      "id": "WEB3-NODEJS-COOKIE",
+      "url": "https://opentutorials.org/module/3630",
+      "label": "Cookie&Auth",
+      "depth": 3
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2-NODEJS--WEB3-NODEJS-COOKIE",
+      "source": "WEB3-NODEJS-COOKIE",
+      "target": "WEB2NODEJS"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2-HTTP--WEB3-NODEJS-COOKIE",
+      "source": "WEB3-NODEJS-COOKIE",
+      "target": "WEB2-HTTP"
+    }
+  },
+  {
+    "data": {
       "id": "WEB2-HTTP-WEB1",
       "source": "WEB2-HTTP",
       "target": "WEB1"
@@ -190,35 +212,35 @@
     }
   },
   {
-    "data":{
+    "data": {
       "id": "WEB3PHP-MYSQL-WEB1",
       "source": "WEB3PHP-MYSQL",
       "target": "WEB2PHP"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "WEB3PHP-MYSQL-DATABASE2MYSQL",
       "source": "WEB3PHP-MYSQL",
       "target": "DATABASE2MYSQL"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "WEB2JAVASCRIPT-WEB3AJAX",
       "source": "WEB3AJAX",
       "target": "WEB2JAVASCRIPT"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "MYSQL-NODEJS-WEB2NODEJS",
       "source": "NODEJS-MYSQL",
       "target": "WEB2NODEJS"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "MYSQL-NODEJS-MYSQL",
       "source": "NODEJS-MYSQL",
       "target": "DATABASE2MYSQL"
