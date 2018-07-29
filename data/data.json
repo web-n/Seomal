@@ -143,6 +143,28 @@
   },
   {
     "data": {
+      "id": "WEB4-EXPRESS-SESSION",
+      "url": "https://opentutorials.org/module/3648",
+      "label": "Session&Auth",
+      "depth": 3
+    }
+  },
+  {
+    "data": {
+      "id": "WEB3-NODEJS-COOKIE--WEB4-EXPRESS-SESSION",
+      "source": "WEB4-EXPRESS-SESSION",
+      "target": "WEB3-NODEJS-COOKIE"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB3-EXPRESS--WEB4-EXPRESS-SESSION",
+      "source": "WEB4-EXPRESS-SESSION",
+      "target": "WEB3-Express"
+    }
+  },
+  {
+    "data": {
       "id": "WEB2-HTTP-WEB1",
       "source": "WEB2-HTTP",
       "target": "WEB1"
