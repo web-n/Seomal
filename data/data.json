@@ -1,5 +1,4 @@
-[
-  {
+[{
     "data": {
       "id": "WEB1",
       "url": "https://opentutorials.org/course/3084",
@@ -161,6 +160,21 @@
       "id": "WEB3-EXPRESS--WEB4-EXPRESS-SESSION",
       "source": "WEB4-EXPRESS-SESSION",
       "target": "WEB3-Express"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB5-EXPRESS-PASSPORT",
+      "url": "https://opentutorials.org/module/3655",
+      "label": "Passport.js",
+      "depth": 4
+    }
+  },
+  {
+    "data": {
+      "id": "WEB4-EXPRESS-SESSION-WEB5-EXPRESS-PASSPORT",
+      "source": "WEB5-EXPRESS-PASSPORT",
+      "target": "WEB4-EXPRESS-SESSION"
     }
   },
   {
