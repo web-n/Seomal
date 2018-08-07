@@ -37,6 +37,14 @@
       "label": "PHP",
       "depth": 2
     }
+  }, 
+  {
+    "data": {
+      "id": "WEB2-OAUTH",
+      "url": "https://opentutorials.org/module/3668",
+      "label": "OAuth 2.0",
+      "depth": 2
+    }
   },
   {
     "data": {
@@ -131,6 +139,13 @@
       "id": "WEB2-NODEJS--WEB3-NODEJS-COOKIE",
       "source": "WEB3-NODEJS-COOKIE",
       "target": "WEB2NODEJS"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2-OAUTH-WEB1",
+      "source": "WEB2-OAUTH",
+      "target": "WEB1"
     }
   },
   {
