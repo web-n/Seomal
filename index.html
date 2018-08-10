@@ -14,9 +14,10 @@
         gtag('js', new Date());
         gtag('config', 'UA-80887304-4');
     </script>
+    <link rel="stylesheet" href="sky.css">
     <style>
         body {
-            background-color: white;
+            margin:0;
         }
 
         #cy {
@@ -34,6 +35,9 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
 <div id="cy"></div>
 <script>
     function getParameterByName(name, url) {
@@ -65,6 +69,8 @@
             var nodeMinSize = 20;
             var fontMaxSize = 22;
             var fontMinSize = 7;
+            var color = 'black';
+            var fontColor = 'white';
 
             cy = cytoscape({
 
@@ -78,10 +84,10 @@
                         style: {
                             'label': 'data(label)',
                             'text-valign': 'center',
-                            'color': 'white',
+                            'color': fontColor,
                             'text-outline-width': 1,
-                            'text-outline-color': 'black',
-                            'background-color': 'black',
+                            'text-outline-color': color,
+                            'background-color': color,
                             'width':function(ele){
                                 return nodeMaxSize*pageRank.rank('#'+ele.id())+nodeMinSize;
                             },
@@ -97,11 +103,10 @@
                         selector: 'edge',
                         style: {
                             'curve-style': 'bezier',
-                            'width': 1,
+                            'width': 0.5,
                             'target-arrow-shape': 'triangle',
-                            'line-color': 'black',
-                            'target-arrow-color': 'black',
-                            'opacity': 0.9
+                            'line-color': color,
+                            'target-arrow-color': color
                         }
                     },
                     {
@@ -142,7 +147,7 @@
                 if(url && url !== '')
                  window.open(url);
             });
-            cy.userPanningEnabled(false);
+            //cy.userPanningEnabled(false);
         });
 
     function debouncer(func, timeout) {
