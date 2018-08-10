@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>SerieseN</title>
+    <title>Seomal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80887304-4"></script>
@@ -55,6 +55,17 @@
             return res.json();
         })
         .then(function (data) {
+
+            _rank_cy = cytoscape({
+                elements: data
+            });
+
+            var pageRank = _rank_cy.elements().pageRank();
+            var nodeMaxSize = 110;
+            var nodeMinSize = 20;
+            var fontMaxSize = 22;
+            var fontMinSize = 7;
+
             cy = cytoscape({
 
                 container: document.getElementById('cy'), // container to render in
@@ -71,9 +82,15 @@
                             'text-outline-width': 1,
                             'text-outline-color': 'black',
                             'background-color': 'black',
-                            'font-size': "mapData(depth, 1, 3, 15, 12)",
-                            'width': "mapData(depth, 1, 3, 50, 30)",
-                            'height': "mapData(depth, 1, 3, 50, 30)"
+                            'width':function(ele){
+                                return nodeMaxSize*pageRank.rank('#'+ele.id())+nodeMinSize;
+                            },
+                            'height':function(ele){
+                                return nodeMaxSize*pageRank.rank('#'+ele.id())+nodeMinSize;
+                            },
+                            'font-size':function(ele){
+                                return fontMaxSize*pageRank.rank('#'+ele.id())+fontMinSize;
+                            }
                         }
                     },
                     {
@@ -114,6 +131,7 @@
                     tile: true
                 }
             });
+
             cy.on('tap', 'node', function (e) {
                 var url = cy.getElementById(this.id()).data('url');
                 gtag('event', 'Click', {

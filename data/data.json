@@ -2,136 +2,119 @@
     "data": {
       "id": "WEB1",
       "url": "https://opentutorials.org/course/3084",
-      "label": "WEB1-HTML&Internet",
-      "depth": 1
+      "label": "WEB1-HTML&Internet"
     }
   },
   {
     "data": {
       "id": "WEB2CSS",
       "url": "https://opentutorials.org/course/3086",
-      "label": "CSS",
-      "depth": 2
+      "label": "CSS"
     }
   },
   {
     "data": {
       "id": "WEB2JAVASCRIPT",
       "url": "https://opentutorials.org/course/3085",
-      "label": "JavaScript",
-      "depth": 2
+      "label": "JavaScript"
     }
   },
   {
     "data": {
       "id": "WEB2NODEJS",
       "url": "https://opentutorials.org/course/3332",
-      "label": "Node.js",
-      "depth": 2
+      "label": "Node.js"
     }
   },
   {
     "data": {
       "id": "WEB2PHP",
       "url": "https://opentutorials.org/course/3130",
-      "label": "PHP",
-      "depth": 2
+      "label": "PHP"
     }
   }, 
   {
     "data": {
       "id": "WEB2-OAUTH",
       "url": "https://opentutorials.org/module/3668",
-      "label": "OAuth 2.0",
-      "depth": 2
+      "label": "OAuth 2.0"
     }
   },
   {
     "data": {
       "id": "DATABASE1",
       "url": "https://opentutorials.org/course/3162",
-      "label": "DATABASE1",
-      "depth": 1
+      "label": "DATABASE1"
     }
   },
   {
     "data": {
       "id": "DATABASE2MYSQL",
       "url": "https://opentutorials.org/course/3161",
-      "label": "MySQL",
-      "depth": 2
+      "label": "MySQL"
     }
   },
   {
     "data": {
       "id": "WEB3PHP-MYSQL",
       "url": "https://opentutorials.org/course/3167",
-      "label": "PHP & MySQL",
-      "depth": 3
+      "label": "PHP & MySQL"
     }
   },
   {
     "data": {
       "id": "WEB2PYTHON",
       "url": "https://opentutorials.org/course/3256",
-      "label": "Python",
-      "depth": 2
+      "label": "Python"
     }
   },
   {
     "data": {
       "id": "WEB2HOME-SERVER",
       "url": "https://opentutorials.org/course/3265",
-      "label": "Home server",
-      "depth": 2
+      "label": "Home server"
     }
   },
   {
     "data": {
       "id": "WEB2DNS",
       "url": "https://opentutorials.org/course/3276",
-      "label": "Domain Name System",
-      "depth": 2
+      "label": "Domain Name System"
     }
   },
   {
     "data": {
       "id": "WEB3AJAX",
       "url": "https://opentutorials.org/course/3281",
-      "label": "Ajax",
-      "depth": 3
+      "label": "Ajax"
     }
   },
   {
     "data": {
       "id": "NODEJS-MYSQL",
       "url": "https://opentutorials.org/module/3560",
-      "label": "Node.js & MySQL",
-      "depth": 3
+      "label": "Node.js & MySQL"
     }
   },
   {
     "data": {
       "id": "WEB3-Express",
       "url": "https://opentutorials.org/module/3590",
-      "label": "Express",
-      "depth": 3
+      "label": "Express"
     }
   },
   {
     "data": {
       "id": "WEB2-HTTP",
       "url": "https://opentutorials.org/module/3621",
-      "label": "HTTP",
-      "depth": 2
+      "label": "HTTP"
     }
   },
   {
     "data": {
       "id": "WEB3-NODEJS-COOKIE",
       "url": "https://opentutorials.org/module/3630",
-      "label": "Cookie&Auth",
-      "depth": 3
+      "label": "Cookie&Auth"
     }
   },
   {
@@ -159,8 +142,7 @@
     "data": {
       "id": "WEB4-EXPRESS-SESSION",
       "url": "https://opentutorials.org/module/3648",
-      "label": "Session&Auth",
-      "depth": 3
+      "label": "Session&Auth"
     }
   },
   {
@@ -181,8 +163,7 @@
     "data": {
       "id": "WEB5-EXPRESS-PASSPORT",
       "url": "https://opentutorials.org/module/3655",
-      "label": "Passport.js",
-      "depth": 4
+      "label": "Passport.js"
     }
   },
   {
