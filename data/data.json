@@ -1,4 +1,5 @@
-[{
+[
+  {
     "data": {
       "id": "WEB1",
       "url": "https://opentutorials.org/course/3084",
@@ -32,7 +33,7 @@
       "url": "https://opentutorials.org/course/3130",
       "label": "PHP"
     }
-  }, 
+  },
   {
     "data": {
       "id": "WEB2-OAUTH",
@@ -115,6 +116,20 @@
       "id": "WEB3-NODEJS-COOKIE",
       "url": "https://opentutorials.org/module/3630",
       "label": "Cookie&Auth"
+    }
+  },
+  {
+    "data": {
+      "id": "DATABASE2-LOWDB",
+      "url": "https://opentutorials.org/module/3675",
+      "label": "lowdb"
+    }
+  },
+  {
+    "data": {
+      "id": "DATABASE1-DATABASE2-LOWDB",
+      "source": "DATABASE2-LOWDB",
+      "target": "DATABASE1"
     }
   },
   {
