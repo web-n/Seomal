@@ -127,6 +127,20 @@
   },
   {
     "data": {
+      "id": "WEB6-MULTIUSER",
+      "url": "https://opentutorials.org/module/3676",
+      "label": "Multi user"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB5-EXPRESS-PASSPORT--WEB6-MULTIUSER",
+      "source": "WEB6-MULTIUSER",
+      "target": "WEB5-EXPRESS-PASSPORT"
+    }
+  },
+  {
+    "data": {
       "id": "DATABASE1-DATABASE2-LOWDB",
       "source": "DATABASE2-LOWDB",
       "target": "DATABASE1"
