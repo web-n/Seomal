@@ -134,6 +134,20 @@
   },
   {
     "data": {
+      "id": "WEB7-LOGIN-WITH-GOOGLE-ON-PASSPORT",
+      "url": "https://opentutorials.org/module/3677",
+      "label": "Google Login"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB6-MULTIUSER--WEB7-LOGIN-WITH-GOOGLE-ON-PASSPORT",
+      "source": "WEB7-LOGIN-WITH-GOOGLE-ON-PASSPORT",
+      "target": "WEB6-MULTIUSER"
+    }
+  },
+  {
+    "data": {
       "id": "WEB5-EXPRESS-PASSPORT--WEB6-MULTIUSER",
       "source": "WEB6-MULTIUSER",
       "target": "WEB5-EXPRESS-PASSPORT"
@@ -151,6 +165,20 @@
       "id": "DATABASE1-DATABASE2-LOWDB",
       "source": "DATABASE2-LOWDB",
       "target": "DATABASE1"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2NODEJS-DATABASE2-LOWDB",
+      "source": "DATABASE2-LOWDB",
+      "target": "WEB2NODEJS"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2JAVASCRIPT-DATABASE2-LOWDB",
+      "source": "DATABASE2-LOWDB",
+      "target": "WEB2JAVASCRIPT"
     }
   },
   {
