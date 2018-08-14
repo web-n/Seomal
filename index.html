@@ -149,6 +149,24 @@
                 if(url && url !== '')
                  window.open(url);
             });
+
+            cy.on('mouseover', 'node', function(e){
+                e.target.successors().each(
+                    function(e){
+                        e.style('color','yellow');
+                        console.log(e.data());
+                    }
+                );
+            });
+
+            cy.on('mouseout', 'node', function(e){
+                e.target.successors().each(
+                    function(e){
+                        e.style('color','white');
+                    }
+                );
+            });
+
             //cy.userPanningEnabled(false);
         });
 
