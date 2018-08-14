@@ -73,11 +73,21 @@
             var color = 'black';
             var fontColor = 'white';
 
+            var nodeColor = 'black';
+            var edgeColor = 'gray';
+            var edgeWidth = '0.5px';
+            var nodeActiveColor = '#white';
+            var nodeActiveBGColor = '#fe4a49';
+            var edgeActiveBGColor = '#fe4a49';
+            var edgeActiveWidth = '4px';
+
+
             cy = cytoscape({
 
                 container: document.getElementById('cy'), // container to render in
 
                 elements: data,
+                minZoom:1,
 
                 style: [ // the stylesheet for the graph
                     {
@@ -86,7 +96,7 @@
                             'label': 'data(label)',
                             'text-valign': 'center',
                             'color': fontColor,
-                            'text-outline-width': 1,
+                            'text-outline-width': 0.7,
                             'text-outline-color': color,
                             'background-color': color,
                             'width':function(ele){
@@ -106,8 +116,8 @@
                             'curve-style': 'bezier',
                             'width': 0.5,
                             'target-arrow-shape': 'triangle',
-                            'line-color': color,
-                            'target-arrow-color': color
+                            'line-color': edgeColor,
+                            'target-arrow-color': edgeColor
                         }
                     },
                     {
@@ -150,22 +160,45 @@
                  window.open(url);
             });
 
-            cy.on('mouseover', 'node', function(e){
+
+
+            cy.on('mouseout', 'node', function(e){
+                e.target.style('color', 'white');
+                e.target.style('background-color',nodeColor);
+
                 e.target.successors().each(
                     function(e){
-                        e.style('color','yellow');
+                        if(e.isEdge()){
+                            e.style('width', edgeWidth);
+                        }
+                        e.style('color','white');
+                        e.style('background-color',nodeColor);
+                        e.style('line-color', edgeColor);
+                        e.style('target-arrow-color', edgeColor);
+                    }
+                );
+            });
+
+            cy.on('mouseover', 'node', function(e){
+                e.target.style('color', nodeActiveColor);
+                e.target.style('background-color',nodeActiveBGColor);
+
+                e.target.successors().each(
+                    function(e){
+                        if(e.isEdge()){
+                            e.style('width', edgeActiveWidth);
+                        }
+                        e.style('color',nodeActiveColor);
+                        e.style('background-color',nodeActiveBGColor);
+                        e.style('target-arrow-color', edgeActiveBGColor);
+                        e.style('line-color', edgeActiveBGColor);
+                        e.style('line-size', edgeActiveBGColor);
                         console.log(e.data());
                     }
                 );
             });
 
-            cy.on('mouseout', 'node', function(e){
-                e.target.successors().each(
-                    function(e){
-                        e.style('color','white');
-                    }
-                );
-            });
+
 
             //cy.userPanningEnabled(false);
         });
