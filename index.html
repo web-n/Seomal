@@ -68,22 +68,17 @@
             var color = 'black';
             var fontColor = 'white';
 
-            var nodeColor = 'black';
-            var edgeColor = 'gray';
+            var nodeBGColor = 'black';
+            var edgeBGColor = 'gray';
             var edgeWidth = '0.5px';
-            var nodeActiveColor = '#white';
             var nodeActiveBGColor = '#fe4a49';
             var edgeActiveBGColor = '#fe4a49';
             var edgeActiveWidth = '4px';
 
-
             cy = cytoscape({
-
                 container: document.getElementById('cy'), // container to render in
-
                 elements: data,
                 minZoom:0.3,
-
                 style: [ // the stylesheet for the graph
                     {
                         selector: 'node',
@@ -111,8 +106,8 @@
                             'curve-style': 'bezier',
                             'width': 0.5,
                             'target-arrow-shape': 'triangle',
-                            'line-color': edgeColor,
-                            'target-arrow-color': edgeColor
+                            'line-color': edgeBGColor,
+                            'target-arrow-color': edgeBGColor
                         }
                     },
                     {
@@ -120,18 +115,19 @@
                         style: {
                             'opacity': '0.5'
                         }
-                    },
-                    {
-                        selector: '#' + getParameterByName('i'),
-                        style: {
-                            'background-color': '#D94E67',
-                            'color': 'white',
-                            'text-outline-color': '#D94E67',
-                            'width': 60,
-                            'height': 60,
-                            'font-size':fontMaxSize
-                        }
                     }
+                    // ,
+                    // {
+                    //     selector: '#' + getParameterByName('i'),
+                    //     style: {
+                    //         'background-color': '#D94E67',
+                    //         'color': 'white',
+                    //         'text-outline-color': '#D94E67',
+                    //         'width': 60,
+                    //         'height': 60,
+                    //         'font-size':fontMaxSize
+                    //     }
+                    // }
                 ],
 
                 layout: {
@@ -144,6 +140,7 @@
                 }
             });
 
+
             cy.on('tap', 'node', function (e) {
                 var url = cy.getElementById(this.id()).data('url');
                 gtag('event', 'Click', {
@@ -155,42 +152,43 @@
                  window.open(url);
             });
 
-
-
-            cy.on('mouseout', 'node', function(e){
-                e.target.style('color', 'white');
-                e.target.style('background-color',nodeColor);
-
-                e.target.successors().each(
+            function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth){
+                target_element.style('background-color', nodeBGColor);
+                target_element.successors().each(
                     function(e){
                         if(e.isEdge()){
                             e.style('width', edgeWidth);
                         }
                         e.style('color','white');
-                        e.style('background-color',nodeColor);
-                        e.style('line-color', edgeColor);
-                        e.style('target-arrow-color', edgeColor);
+                        e.style('background-color',nodeBGColor);
+                        e.style('line-color', edgeBGColor);
+                        e.style('target-arrow-color', edgeBGColor);
                     }
                 );
+            }
+
+            function setResetFocus(target_cy){
+                target_cy.nodes().forEach(function(target){
+                    target.style('background-color', nodeBGColor);
+                });
+                target_cy.edges().forEach(function(target){
+                    target.style('line-color', edgeBGColor);
+                    target.style('target-arrow-color', edgeBGColor);
+                    target.style('width', edgeWidth);
+                });
+
+            }
+
+            setFocus(cy.$('#'+getParameterByName('i')), nodeActiveBGColor, edgeActiveBGColor, edgeActiveWidth);
+
+
+            cy.on('mouseout', 'node', function(e){
+                setResetFocus(e.cy);
             });
 
             cy.on('mouseover', 'node', function(e){
-                e.target.style('color', nodeActiveColor);
-                e.target.style('background-color',nodeActiveBGColor);
-
-                e.target.successors().each(
-                    function(e){
-                        if(e.isEdge()){
-                            e.style('width', edgeActiveWidth);
-                        }
-                        e.style('color',nodeActiveColor);
-                        e.style('background-color',nodeActiveBGColor);
-                        e.style('target-arrow-color', edgeActiveBGColor);
-                        e.style('line-color', edgeActiveBGColor);
-                        e.style('line-size', edgeActiveBGColor);
-                        console.log(e.data());
-                    }
-                );
+                setResetFocus(e.cy);
+                setFocus(e.target, nodeActiveBGColor, edgeActiveBGColor, edgeActiveWidth);
             });
 
 
