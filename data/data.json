@@ -148,6 +148,13 @@
   },
   {
     "data": {
+      "id": "WEB2-OAUTH--WEB7-LOGIN-WITH-GOOGLE-ON-PASSPORT",
+      "source": "WEB7-LOGIN-WITH-GOOGLE-ON-PASSPORT",
+      "target": "WEB2-OAUTH"
+    }
+  },
+  {
+    "data": {
       "id": "WEB5-EXPRESS-PASSPORT--WEB6-MULTIUSER",
       "source": "WEB6-MULTIUSER",
       "target": "WEB5-EXPRESS-PASSPORT"
