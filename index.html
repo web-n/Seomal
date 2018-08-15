@@ -34,8 +34,9 @@
         }
     </style>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
-    <script src="./lib/cytoscape.js-3.2.15/dist/cytoscape.min.js"></script>
+    <script src="./cytoscape.js"></script>
     <script src="./lib/cytoscape.js-cose-bilkent-4.0.0/cytoscape-cose-bilkent.js"></script>
+    <script src="cytoscape-cose-bilkent.js"></script>
     <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -195,9 +196,9 @@
             if(home){
                 var _home = cy.$('#'+home);
                 setFocus(_home, nodeActiveBGColor, edgeActiveBGColor, edgeActiveWidth);
-                cy.animate({
-                    center:{eles:_home}
-                }, {duration:500})
+                // cy.animate({
+                //     center:{eles:_home}
+                // }, {duration:1500})
             }
 
 
