@@ -25,10 +25,19 @@
             height: 100%;
             display: block;
         }
+
+        .pin{
+            /*position: absolute;*/
+            /*top:-80px;*/
+            /*left:-24px;*/
+            background-color: rgba(255,255,255,0);
+        }
     </style>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
-    <script src="cytoscape.js"></script>
-    <script src="cytoscape-cose-bilkent.js"></script>
+    <script src="./lib/cytoscape.js-3.2.15/dist/cytoscape.min.js"></script>
+    <script src="./lib/cytoscape.js-cose-bilkent-4.0.0/cytoscape-cose-bilkent.js"></script>
+    <script src="./lib/popper.js-1.14.4/dist/umd/popper.min.js"></script>
+    <script src="./lib/cytoscape.js-popper-1.0.1/cytoscape-popper.js"></script>
     <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -72,9 +81,9 @@
             var nodeBGColor = 'black';
             var edgeBGColor = 'gray';
             var edgeWidth = '0.5px';
-            var nodeActiveBGColor = '#fe4a49';
+            var nodeActiveBGColor = 'black';
             var edgeActiveBGColor = '#fe4a49';
-            var edgeActiveWidth = '4px';
+            var edgeActiveWidth = '1px';
 
             cy = cytoscape({
                 container: document.getElementById('cy'), // container to render in
@@ -108,7 +117,8 @@
                             'width': 0.5,
                             'target-arrow-shape': 'triangle',
                             'line-color': edgeBGColor,
-                            'target-arrow-color': edgeBGColor
+                            'target-arrow-color': edgeBGColor,
+                            'arrow-scale':0.5
                         }
                     },
                     {
@@ -140,6 +150,8 @@
                     tile: true
                 }
             });
+
+
 
 
             cy.on('tap', 'node', function (e) {
@@ -180,7 +192,27 @@
 
             }
 
-            setFocus(cy.$('#'+getParameterByName('i')), nodeActiveBGColor, edgeActiveBGColor, edgeActiveWidth);
+            var home = getParameterByName('i');
+            if(home){
+                var _home = cy.$('#'+home);
+                setFocus(_home, nodeActiveBGColor, edgeActiveBGColor, edgeActiveWidth);
+                let node = _home;
+                let popper = node.popper({
+                    content: function() {
+                        var div = document.createElement('div');
+                        div.innerHTML = '<img class="pin" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgZmlsbD0iIzFBMUExQSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDY0LjcyMyAxMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY0LjcyMyAxMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Ik0zMi4zMzMsMEMxNC40NjIsMCwwLDE0LjUxOSwwLDMyLjM5YzAsMjAuMzQzLDE0LjcxMSwyNy42NDcsMjAuMDUyLDM1LjUxOVMzMS4zOSw4NC40MzgsMzIuMzMzLDEwMGMwLjk0NC0xNS41MTgsNi4xOS0yMy4wNzQsMTEuOTk1LTMyLjA5MmM1LjgwNi05LjAxOCwyMC4zOTUtMTcuNjQ4LDIwLjM5NS0zNS41MTlTNTAuMjAzLDAsMzIuMzMzLDB6IE0zMi4zNjEsMjYuMTE0YzMuMjAxLDAsNS43OTcsMi41OTUsNS43OTcsNS43OTZzLTIuNTk2LDUuNzk2LTUuNzk3LDUuNzk2cy01Ljc5Ni0yLjU5NS01Ljc5Ni01Ljc5NlMyOS4xNiwyNi4xMTQsMzIuMzYxLDI2LjExNHoiPjwvcGF0aD48L3N2Zz4=" width="50">';
+                        document.body.appendChild( div );
+                        return div;
+                    },
+                    popper:{placement:'top'}
+                });
+                function updatePopper() {
+                    popper.scheduleUpdate();
+                }
+                node.on('position', updatePopper);
+                cy.on('pan zoom resize', updatePopper);
+            }
+
 
 
             cy.on('mouseout', 'node', function(e){
@@ -215,5 +247,6 @@
         cy.userPanningEnabled(true)
     })
 </script>
+
 </body>
 </html>
