@@ -33,6 +33,7 @@
             background-color: rgba(255,255,255,0);
         }
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
     <script src="./cytoscape.js"></script>
     <script src="./lib/cytoscape.js-cose-bilkent-4.0.0/cytoscape-cose-bilkent.js"></script>
@@ -72,15 +73,16 @@
             var pageRank = _rank_cy.elements().pageRank();
             var nodeMaxSize = 120;
             var nodeMinSize = 8;
-            var fontMaxSize = 22;
-            var fontMinSize = 10;
-            var color = 'black';
-            var fontColor = 'white';
+            var fontMaxSize = 13;
+            var fontMinSize = 8;
+            var textOutlineColor = 'white';
+            var fontColor = 'black';
 
-            var nodeBGColor = 'black';
-            var edgeBGColor = 'gray';
+            var nodeBGColor = '#4f5b66';
+            var edgeBGColor = '#c0c5ce';
             var edgeWidth = '0.5px';
-            var nodeActiveBGColor = '#fe4a49';
+            var nodeSuccessorBGColor = '#fe4a49';
+            var nodeActiveBGColor = '#fed766';
             var edgeActiveBGColor = '#fe4a49';
             var edgeActiveWidth = '1px';
 
@@ -91,17 +93,18 @@
                 container: document.getElementById('cy'), // container to render in
                 elements: data,
                 minZoom:0.3,
-                motionBlur:true,
                 style: [ // the stylesheet for the graph
                     {
                         selector: 'node',
                         style: {
+                            'font-family':'Open Sans Condensed',
+                            'font-weight': '200',
                             'label': 'data(label)',
-                            'text-valign': 'center',
+                            'text-valign': 'top',
                             'color': fontColor,
-                            'text-outline-width': 0.7,
-                            'text-outline-color': color,
-                            'background-color': color,
+                            'text-outline-width': 0,
+                            'text-outline-color': textOutlineColor,
+                            'background-color': nodeBGColor,
                             'width':function(ele){
                                 return nodeMaxSize*pageRank.rank('#'+ele.id())+nodeMinSize;
                             },
@@ -170,14 +173,14 @@
 
             function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth){
                 setOpacity(cy, 0.1);
-                target_element.style('background-color', nodeBGColor);
+                target_element.style('background-color', nodeActiveBGColor);
                 setOpacityElement(target_element, 1);
                 target_element.successors().each(
                     function(e){
                         if(e.isEdge()){
                             e.style('width', edgeWidth);
                         }
-                        e.style('color','white');
+                        e.style('color',fontColor);
                         e.style('background-color',nodeBGColor);
                         e.style('line-color', edgeBGColor);
                         e.style('target-arrow-color', edgeBGColor);
@@ -226,7 +229,7 @@
             var home = getParameterByName('i');
             if(home){
                 var _home = cy.$('#'+home);
-                setFocus(_home, nodeActiveBGColor, edgeActiveBGColor, edgeActiveWidth);
+                setFocus(_home, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth);
                 // cy.animate({
                 //     center:{eles:_home}
                 // }, {duration:1500})
@@ -241,7 +244,7 @@
 
             cy.on('mouseover', 'node', function(e){
                 setResetFocus(e.cy);
-                setFocus(e.target, nodeActiveBGColor, edgeActiveBGColor, edgeActiveWidth);
+                setFocus(e.target, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth);
             });
 
 
