@@ -71,7 +71,7 @@
             });
 
             var pageRank = _rank_cy.elements().pageRank();
-            var nodeMaxSize = 120;
+            var nodeMaxSize = 100;
             var nodeMinSize = 8;
             var fontMaxSize = 13;
             var fontMinSize = 8;
@@ -160,16 +160,7 @@
 
 
 
-            cy.on('tap', 'node', function (e) {
-                var url = cy.getElementById(this.id()).data('url');
-                gtag('event', 'Click', {
-                    'event_category': 'node',
-                    'event_label': this.id(),
-                    'value': 1
-                });
-                if(url && url !== '')
-                 window.open(url);
-            });
+
 
             function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth){
                 setOpacity(cy, 0.1);
@@ -236,6 +227,17 @@
             }
 
 
+            cy.on('tap', 'node', function (e) {
+                var url = cy.getElementById(this.id()).data('url');
+                gtag('event', 'Click', {
+                    'event_category': 'node',
+                    'event_label': this.id(),
+                    'value': 1
+                });
+                if(url && url !== '')
+                    window.open(url);
+            });
+
 
             cy.on('mouseout', 'node', function(e){
                 setResetFocus(e.cy);
@@ -245,8 +247,8 @@
             cy.on('mouseover', 'node', function(e){
                 setResetFocus(e.cy);
                 setFocus(e.target, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth);
-            });
 
+            });
 
 
             //cy.userPanningEnabled(false);
