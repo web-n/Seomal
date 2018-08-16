@@ -84,6 +84,9 @@
             var edgeActiveBGColor = '#fe4a49';
             var edgeActiveWidth = '1px';
 
+            var predecessorsBGColor = '#2ab7ca';
+
+
             cy = cytoscape({
                 container: document.getElementById('cy'), // container to render in
                 elements: data,
@@ -166,7 +169,9 @@
             });
 
             function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth){
+                setOpacity(cy, 0.1);
                 target_element.style('background-color', nodeBGColor);
+                setOpacityElement(target_element, 1);
                 target_element.successors().each(
                     function(e){
                         if(e.isEdge()){
@@ -176,18 +181,44 @@
                         e.style('background-color',nodeBGColor);
                         e.style('line-color', edgeBGColor);
                         e.style('target-arrow-color', edgeBGColor);
+                        setOpacityElement(e, 1);
                     }
                 );
+                target_element.predecessors().each(function(e){
+                    if(e.isEdge()){
+                        e.style('width', edgeWidth);
+                    }
+                    e.style('background-color',predecessorsBGColor);
+                    e.style('line-color', predecessorsBGColor);
+                    e.style('target-arrow-color', predecessorsBGColor);
+                    setOpacityElement(e, 1);
+                });
+            }
+
+            function setOpacityElement(target_element, degree){
+                target_element.style('opacity', degree);
+            }
+
+            function setOpacity(target_cy, degree){
+                target_cy.nodes().forEach(function(target){
+                    setOpacityElement(target, 0.05);
+                });
+                target_cy.edges().forEach(function(target){
+                    setOpacityElement(target, 0.05);
+                });
+
             }
 
             function setResetFocus(target_cy){
                 target_cy.nodes().forEach(function(target){
                     target.style('background-color', nodeBGColor);
+                    setOpacityElement(target, 1);
                 });
                 target_cy.edges().forEach(function(target){
                     target.style('line-color', edgeBGColor);
                     target.style('target-arrow-color', edgeBGColor);
                     target.style('width', edgeWidth);
+                    setOpacityElement(target, 1);
                 });
 
             }
@@ -205,6 +236,7 @@
 
             cy.on('mouseout', 'node', function(e){
                 setResetFocus(e.cy);
+
             });
 
             cy.on('mouseover', 'node', function(e){
