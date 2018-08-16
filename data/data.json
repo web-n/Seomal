@@ -348,5 +348,26 @@
       "source": "NODEJS-MYSQL",
       "target": "DATABASE2MYSQL"
     }
+  },
+  {
+    "data": {
+      "id": "WEB7-LOGIN-WITH-FACEBOOK-ON-PASSPORT",
+      "url": "https://opentutorials.org/module/3680",
+      "label": "Facebook Login"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB6-MULTIUSER--WEB7-LOGIN-WITH-FACEBOOK-ON-PASSPORT",
+      "source": "WEB7-LOGIN-WITH-FACEBOOK-ON-PASSPORT",
+      "target": "WEB6-MULTIUSER"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2-OAUTH--WEB7-LOGIN-WITH-FACEBOOK-ON-PASSPORT",
+      "source": "WEB7-LOGIN-WITH-FACEBOOK-ON-PASSPORT",
+      "target": "WEB2-OAUTH"
+    }
   }
 ]
