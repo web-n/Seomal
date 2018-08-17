@@ -83,6 +83,8 @@
             var nodeBGColor = '#4f5b66';
             var edgeBGColor = '#c0c5ce';
             var edgeWidth = '0.3px';
+            var arrowScale = 0.3
+            var arrowActiveScale = 0.5
             var nodeSuccessorBGColor = '#fe4a49';
             var nodeActiveBGColor = '#fed766';
             var edgeActiveBGColor = '#fe4a49';
@@ -141,7 +143,6 @@
                             'target-arrow-shape': 'triangle',
                             'line-color': edgeBGColor,
                             'target-arrow-color': edgeBGColor,
-                            'arrow-scale':0.3
                         }
                     },
                     {
@@ -166,13 +167,14 @@
 
 
 
-            function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth){
+            function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth, arrowScale){
                 target_element.style('background-color', nodeActiveBGColor);
                 setOpacityElement(target_element, 1);
                 target_element.successors().each(
                     function(e){
                         if(e.isEdge()){
                             e.style('width', edgeWidth);
+                            e.style('arrow-scale', arrowScale);
                         }
                         e.style('color',fontColor);
                         e.style('background-color',nodeBGColor);
@@ -185,6 +187,7 @@
                 target_element.predecessors().each(function(e){
                     if(e.isEdge()){
                         e.style('width', edgeWidth);
+                        e.style('arrow-scale', arrowScale);
                     }
                     e.style('background-color',predecessorsBGColor);
                     e.style('line-color', predecessorsBGColor);
@@ -218,6 +221,7 @@
                     target.style('line-color', edgeBGColor);
                     target.style('target-arrow-color', edgeBGColor);
                     target.style('width', edgeWidth);
+                    target.style('arrow-scale', arrowScale);
                     setOpacityElement(target, 1);
                 });
 
@@ -226,8 +230,9 @@
             var home = getParameterByName('i');
             if(home){
                 var _home = cy.$('#'+home);
+                setResetFocus(cy);
                 setOpacity(cy, 0.4);
-                setFocus(_home, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth);
+                setFocus(_home, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth, arrowActiveScale);
                 // cy.animate({
                 //     center:{eles:_home}
                 // }, {duration:1500})
@@ -256,7 +261,7 @@
                 // document.querySelector('#msg').value += (e.type)+"\n";
                 setResetFocus(e.cy);
                 setOpacity(cy, 0);
-                setFocus(e.target, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth);
+                setFocus(e.target, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth, arrowActiveScale);
 
             });
 
