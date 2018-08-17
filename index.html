@@ -133,18 +133,6 @@
                             'opacity': '0.5'
                         }
                     }
-                    // ,
-                    // {
-                    //     selector: '#' + getParameterByName('i'),
-                    //     style: {
-                    //         'background-color': '#D94E67',
-                    //         'color': 'white',
-                    //         'text-outline-color': '#D94E67',
-                    //         'width': 60,
-                    //         'height': 60,
-                    //         'font-size':fontMaxSize
-                    //     }
-                    // }
                 ],
 
                 layout: {
@@ -159,6 +147,12 @@
 
 
 
+            function getMaxZIndex(){
+                if(!window.zindex){
+                    window.zindex = 1;
+                }
+                return ++window.zindex;
+            }
 
 
 
@@ -175,6 +169,7 @@
                         e.style('background-color',nodeBGColor);
                         e.style('line-color', edgeBGColor);
                         e.style('target-arrow-color', edgeBGColor);
+                        e.style('z-index', getMaxZIndex());
                         setOpacityElement(e, 1);
                     }
                 );
@@ -185,8 +180,10 @@
                     e.style('background-color',predecessorsBGColor);
                     e.style('line-color', predecessorsBGColor);
                     e.style('target-arrow-color', predecessorsBGColor);
+                    e.style('z-index', getMaxZIndex());
                     setOpacityElement(e, 1);
                 });
+                target_element.style('z-index', getMaxZIndex());
             }
 
             function setOpacityElement(target_element, degree){
