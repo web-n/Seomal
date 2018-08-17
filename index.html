@@ -37,8 +37,8 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
     <script src="./cytoscape.js"></script>
     <script src="./lib/cytoscape.js-cose-bilkent-4.0.0/cytoscape-cose-bilkent.js"></script>
-    <!--<script src="cytoscape-cose-bilkent.js"></script>-->
-    <script src="lib/cytoscape.js-euler-1.2.1/cytoscape-euler.js"></script>
+    <script src="cytoscape-cose-bilkent.js"></script>
+    <!--<script src="lib/cytoscape.js-euler-1.2.1/cytoscape-euler.js"></script>-->
     <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -72,57 +72,38 @@
             });
 
             var pageRank = _rank_cy.elements().pageRank();
-            var nodeMaxSize = 70;
+            var nodeMaxSize = 60;
             var nodeMinSize = 4;
-            var fontMaxSize = 13;
-            var fontMinSize = 8;
+            var fontMaxSize = 8;
+            var fontMinSize = 5;
 
             var textOutlineColor = 'white';
             var fontColor = 'black';
             var nodeBGColor = '#4f5b66';
             var edgeBGColor = '#c0c5ce';
-            var edgeWidth = '0.5px';
+            var edgeWidth = '0.3px';
             var nodeSuccessorBGColor = '#fe4a49';
             var nodeActiveBGColor = '#fed766';
             var edgeActiveBGColor = '#fe4a49';
             var edgeActiveWidth = '1px';
             var predecessorsBGColor = '#2ab7ca';
 
-            // var layout = {
-            //     name: 'cose-bilkent',
-            //     animate: false,
-            //     gravityRangeCompound: 1.5,
-            //     fit: true,
-            //     idealEdgeLength: 100,
-            //     tile: true
-            // };
-
-            // var layout = {
-            //     name: 'cose',
-            //     idealEdgeLength: 100,
-            //     nodeOverlap: 20,
-            //     refresh: 20,
-            //     fit: true,
-            //     padding: 30,
-            //     randomize: false,
-            //     componentSpacing: 100,
-            //     nodeRepulsion: 400000,
-            //     edgeElasticity: 100,
-            //     nestingFactor: 5,
-            //     gravity: 80,
-            //     numIter: 1000,
-            //     initialTemp: 200,
-            //     coolingFactor: 0.95,
-            //     minTemp: 1.0
-            // };
-
             var layout = {
-                name: 'euler',
-                randomize: true,
+                name: 'cose-bilkent',
                 animate: false,
-                fit:true
-                // some more options here...
-            }
+                gravityRangeCompound: 1,
+                fit: true,
+                tile: true
+            };
+
+
+            // var layout = {
+            //     name: 'euler',
+            //     randomize: true,
+            //     animate: false,
+            //     fit:true
+            //     // some more options here...
+            // }
 
 
             cy = cytoscape({
@@ -156,11 +137,11 @@
                         selector: 'edge',
                         style: {
                             'curve-style': 'bezier',
-                            'width': 0.5,
+                            'width': 0.3,
                             'target-arrow-shape': 'triangle',
                             'line-color': edgeBGColor,
                             'target-arrow-color': edgeBGColor,
-                            'arrow-scale':0.5
+                            'arrow-scale':0.3
                         }
                     },
                     {
