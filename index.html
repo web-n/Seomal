@@ -33,11 +33,10 @@
             background-color: rgba(255,255,255,0);
         }
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
     <script src="./cytoscape.js"></script>
     <script src="./lib/cytoscape.js-cose-bilkent-4.0.0/cytoscape-cose-bilkent.js"></script>
-    <script src="cytoscape-cose-bilkent.js"></script>
     <!--<script src="cytoscape-cose-bilkent.js"></script>-->
     <script src="lib/cytoscape.js-euler-1.2.1/cytoscape-euler.js"></script>
     <script
@@ -73,13 +72,13 @@
             });
 
             var pageRank = _rank_cy.elements().pageRank();
-            var nodeMaxSize = 100;
-            var nodeMinSize = 8;
+            var nodeMaxSize = 70;
+            var nodeMinSize = 4;
             var fontMaxSize = 13;
             var fontMinSize = 8;
+
             var textOutlineColor = 'white';
             var fontColor = 'black';
-
             var nodeBGColor = '#4f5b66';
             var edgeBGColor = '#c0c5ce';
             var edgeWidth = '0.5px';
@@ -87,7 +86,6 @@
             var nodeActiveBGColor = '#fed766';
             var edgeActiveBGColor = '#fe4a49';
             var edgeActiveWidth = '1px';
-
             var predecessorsBGColor = '#2ab7ca';
 
             // var layout = {
@@ -278,6 +276,11 @@
 
             });
 
+            // web font가 로딩이 끝나면 강제로 redraw 합니다.
+            waitForWebfonts(['Open Sans Condensed'], function(){
+                cy.forceRender();
+            })
+
 
             //cy.userPanningEnabled(false);
         });
@@ -292,6 +295,61 @@
             }, timeout);
         }
     }
+
+    function waitForWebfonts(fonts, callback) {
+        var loadedFonts = 0;
+        for(var i = 0, l = fonts.length; i < l; ++i) {
+            (function(font) {
+                var node = document.createElement('span');
+                // Characters that vary significantly among different fonts
+                node.innerHTML = 'giItT1WQy@!-/#';
+                // Visible - so we can measure it - but not on the screen
+                node.style.position      = 'absolute';
+                node.style.left          = '-10000px';
+                node.style.top           = '-10000px';
+                // Large font size makes even subtle changes obvious
+                node.style.fontSize      = '300px';
+                // Reset any font properties
+                node.style.fontFamily    = 'sans-serif';
+                node.style.fontVariant   = 'normal';
+                node.style.fontStyle     = 'normal';
+                node.style.fontWeight    = 'normal';
+                node.style.letterSpacing = '0';
+                document.body.appendChild(node);
+
+                // Remember width with no applied web font
+                var width = node.offsetWidth;
+
+                node.style.fontFamily = font + ', sans-serif';
+
+                var interval;
+                function checkFont() {
+                    // Compare current width with original width
+                    if(node && node.offsetWidth != width) {
+                        ++loadedFonts;
+                        node.parentNode.removeChild(node);
+                        node = null;
+                    }
+
+                    // If all fonts have been loaded
+                    if(loadedFonts >= fonts.length) {
+                        if(interval) {
+                            clearInterval(interval);
+                        }
+                        if(loadedFonts == fonts.length) {
+                            callback();
+                            return true;
+                        }
+                    }
+                };
+
+                if(!checkFont()) {
+                    interval = setInterval(checkFont, 50);
+                }
+            })(fonts[i]);
+        }
+    };
+
 
     $(window).resize(debouncer(function () {
         cy.fit()
