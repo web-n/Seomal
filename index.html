@@ -45,6 +45,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<!--<textarea id="msg" style="width:100%; height:200px;"></textarea>-->
 <div id="cy"></div>
 <script>
     function getParameterByName(name, url) {
@@ -72,8 +73,8 @@
             });
 
             var pageRank = _rank_cy.elements().pageRank();
-            var nodeMaxSize = 60;
-            var nodeMinSize = 4;
+            var nodeMaxSize = 70;
+            var nodeMinSize = 5;
             var fontMaxSize = 8;
             var fontMinSize = 5;
 
@@ -91,7 +92,7 @@
             var layout = {
                 name: 'cose-bilkent',
                 animate: false,
-                gravityRangeCompound: 1,
+                gravityRangeCompound: 1.5,
                 fit: true,
                 tile: true
             };
@@ -102,7 +103,6 @@
             //     randomize: true,
             //     animate: false,
             //     fit:true
-            //     // some more options here...
             // }
 
 
@@ -167,7 +167,6 @@
 
 
             function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth){
-                setOpacity(cy, 0.1);
                 target_element.style('background-color', nodeActiveBGColor);
                 setOpacityElement(target_element, 1);
                 target_element.successors().each(
@@ -202,10 +201,10 @@
 
             function setOpacity(target_cy, degree){
                 target_cy.nodes().forEach(function(target){
-                    setOpacityElement(target, 0.05);
+                    setOpacityElement(target, degree);
                 });
                 target_cy.edges().forEach(function(target){
-                    setOpacityElement(target, 0.05);
+                    setOpacityElement(target, degree);
                 });
 
             }
@@ -227,6 +226,7 @@
             var home = getParameterByName('i');
             if(home){
                 var _home = cy.$('#'+home);
+                setOpacity(cy, 0.4);
                 setFocus(_home, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth);
                 // cy.animate({
                 //     center:{eles:_home}
@@ -246,13 +246,16 @@
             });
 
 
-            cy.on('mouseout', 'node', function(e){
+            cy.on('tapend mouseout', 'node', function(e){
+                // document.querySelector('#msg').value += (e.type)+"\n";
                 setResetFocus(e.cy);
 
             });
 
-            cy.on('mouseover', 'node', function(e){
+            cy.on('tapstart mouseover', 'node', function(e){
+                // document.querySelector('#msg').value += (e.type)+"\n";
                 setResetFocus(e.cy);
+                setOpacity(cy, 0);
                 setFocus(e.target, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth);
 
             });
