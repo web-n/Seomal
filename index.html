@@ -101,6 +101,9 @@
                     setOpacityElement(e, 1);
                 });
                 target_element.style('z-index', getMaxZIndex());
+                target_element.style('width', Math.max(parseFloat(target_element.style('width')), nodeActiveSize));
+                target_element.style('height', Math.max(parseFloat(target_element.style('height')), nodeActiveSize));
+                target_element.style('font-size', Math.max(parseFloat(target_element.style('font-size')), nodeActiveFontSize));
             }
 
             var pageRank = _rank_cy.elements().pageRank();
@@ -119,7 +122,7 @@
             var successorColor = '#fe4a49';
             var predecessorsColor = '#2ab7ca';
             var nodeActiveBGColor = '#fed766';
-            var nodeActiveSize = 20;
+            var nodeActiveSize = 23;
             var nodeActiveFontSize = 7;
             var edgeActiveWidth = '1px';
 
@@ -219,6 +222,10 @@
                 target_cy.nodes().forEach(function(target){
                     target.style('background-color', nodeBGColor);
                     setOpacityElement(target, 1);
+                    var rank = pageRank.rank(target);
+                    target.style('width', nodeMaxSize*rank+nodeMinSize);
+                    target.style('height', nodeMaxSize*rank+nodeMinSize);
+                    target.style('font-size', fontMaxSize*rank+fontMinSize);
                 });
                 target_cy.edges().forEach(function(target){
                     target.style('line-color', edgeBGColor);
@@ -261,14 +268,9 @@
 
             });
 
-
             cy.on('tapend mouseout', 'node', function(e){
                 // document.querySelector('#msg').value += (e.type)+"\n";
                 setResetFocus(e.cy);
-                var rank = pageRank.rank(e.target);
-                e.target.style('width', nodeMaxSize*rank+nodeMinSize);
-                e.target.style('height', nodeMaxSize*rank+nodeMinSize);
-                e.target.style('font-size', fontMaxSize*rank+fontMinSize);
             });
 
             cy.on('tapstart mouseover', 'node', function(e){
@@ -276,9 +278,6 @@
                 setResetFocus(e.cy);
                 setOpacity(cy, 0);
                 setFocus(e.target, successorColor, predecessorsColor, edgeActiveWidth, arrowActiveScale);
-                e.target.style('width', Math.max(parseFloat(e.target.style('width')), nodeActiveSize));
-                e.target.style('height', Math.max(parseFloat(e.target.style('height')), nodeActiveSize));
-                e.target.style('font-size', Math.max(parseFloat(e.target.style('font-size')), nodeActiveFontSize));
             });
 
             // web font가 로딩이 끝나면 강제로 redraw 합니다.
