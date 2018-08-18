@@ -169,7 +169,6 @@
 
             function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth, arrowScale){
                 target_element.style('background-color', nodeActiveBGColor);
-                console.log(target_element, nodeActiveBGColor);
                 setOpacityElement(target_element, 1);
                 target_element.successors().each(
                     function(e){
@@ -243,13 +242,14 @@
 
 
             cy.on('tap', function (e) {
+                // 바탕화면을 탭했을 때 하이라이트를 제거
                 if(e.cy === e.target){
                     setResetFocus(e.cy);
                 } else {
-                    var url = cy.getElementById(this.id()).data('url');
+                    var url = e.target.data('url');
                     gtag('event', 'Click', {
                         'event_category': 'node',
-                        'event_label': this.id(),
+                        'event_label': e.target.id(),
                         'value': 1
                     });
                     if(url && url !== '')
