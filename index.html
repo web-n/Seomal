@@ -169,6 +169,7 @@
 
             function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth, arrowScale){
                 target_element.style('background-color', nodeActiveBGColor);
+                console.log(target_element, nodeActiveBGColor);
                 setOpacityElement(target_element, 1);
                 target_element.successors().each(
                     function(e){
@@ -236,18 +237,25 @@
                 // cy.animate({
                 //     center:{eles:_home}
                 // }, {duration:1500})
+            } else {
+                setResetFocus(cy);
             }
 
 
-            cy.on('tap', 'node', function (e) {
-                var url = cy.getElementById(this.id()).data('url');
-                gtag('event', 'Click', {
-                    'event_category': 'node',
-                    'event_label': this.id(),
-                    'value': 1
-                });
-                if(url && url !== '')
-                    window.open(url);
+            cy.on('tap', function (e) {
+                if(e.cy === e.target){
+                    setResetFocus(e.cy);
+                } else {
+                    var url = cy.getElementById(this.id()).data('url');
+                    gtag('event', 'Click', {
+                        'event_category': 'node',
+                        'event_label': this.id(),
+                        'value': 1
+                    });
+                    if(url && url !== '')
+                        window.open(url);
+                }
+
             });
 
 
@@ -270,7 +278,8 @@
                 cy.forceRender();
             })
 
-            setResetFocus(cy);
+
+
         });
 
     function debouncer(func, timeout) {
