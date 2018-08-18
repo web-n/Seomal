@@ -72,6 +72,37 @@
                 elements: data
             });
 
+            function setFocus(target_element, successorsColor, predecessorsColor, edgeWidth, arrowScale){
+                target_element.style('background-color', nodeActiveBGColor);
+                setOpacityElement(target_element, 1);
+                target_element.successors().each(
+                    function(e){
+                        if(e.isEdge()){
+                            e.style('width', edgeWidth);
+                            e.style('arrow-scale', arrowScale);
+                        }
+                        e.style('color',fontColor);
+                        e.style('background-color',successorsColor);
+                        e.style('line-color', successorsColor);
+                        e.style('target-arrow-color', successorsColor);
+                        e.style('z-index', getMaxZIndex());
+                        setOpacityElement(e, 1);
+                    }
+                );
+                target_element.predecessors().each(function(e){
+                    if(e.isEdge()){
+                        e.style('width', edgeWidth);
+                        e.style('arrow-scale', arrowScale);
+                    }
+                    e.style('background-color',predecessorsColor);
+                    e.style('line-color', predecessorsColor);
+                    e.style('target-arrow-color', predecessorsColor);
+                    e.style('z-index', getMaxZIndex());
+                    setOpacityElement(e, 1);
+                });
+                target_element.style('z-index', getMaxZIndex());
+            }
+
             var pageRank = _rank_cy.elements().pageRank();
             var nodeMaxSize = 70;
             var nodeMinSize = 5;
@@ -85,11 +116,12 @@
             var edgeWidth = '0.3px';
             var arrowScale = 0.3
             var arrowActiveScale = 0.5
-            var nodeSuccessorBGColor = '#fe4a49';
+            var successorColor = '#fe4a49';
+            var predecessorsColor = '#2ab7ca';
             var nodeActiveBGColor = '#fed766';
-            var edgeActiveBGColor = '#fe4a49';
+            var nodeActiveSize = 20;
+            var nodeActiveFontSize = 7;
             var edgeActiveWidth = '1px';
-            var predecessorsBGColor = '#2ab7ca';
 
             var layout = {
                 name: 'cose-bilkent',
@@ -167,36 +199,7 @@
 
 
 
-            function setFocus(target_element, nodeBGColor, edgeBGColor, edgeWidth, arrowScale){
-                target_element.style('background-color', nodeActiveBGColor);
-                setOpacityElement(target_element, 1);
-                target_element.successors().each(
-                    function(e){
-                        if(e.isEdge()){
-                            e.style('width', edgeWidth);
-                            e.style('arrow-scale', arrowScale);
-                        }
-                        e.style('color',fontColor);
-                        e.style('background-color',nodeBGColor);
-                        e.style('line-color', edgeBGColor);
-                        e.style('target-arrow-color', edgeBGColor);
-                        e.style('z-index', getMaxZIndex());
-                        setOpacityElement(e, 1);
-                    }
-                );
-                target_element.predecessors().each(function(e){
-                    if(e.isEdge()){
-                        e.style('width', edgeWidth);
-                        e.style('arrow-scale', arrowScale);
-                    }
-                    e.style('background-color',predecessorsBGColor);
-                    e.style('line-color', predecessorsBGColor);
-                    e.style('target-arrow-color', predecessorsBGColor);
-                    e.style('z-index', getMaxZIndex());
-                    setOpacityElement(e, 1);
-                });
-                target_element.style('z-index', getMaxZIndex());
-            }
+
 
             function setOpacityElement(target_element, degree){
                 target_element.style('opacity', degree);
@@ -232,7 +235,7 @@
                 var _home = cy.$('#'+home);
                 setResetFocus(cy);
                 setOpacity(cy, 0.4);
-                setFocus(_home, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth, arrowActiveScale);
+                setFocus(_home, successorColor, predecessorsColor, edgeActiveWidth, arrowActiveScale);
                 // cy.animate({
                 //     center:{eles:_home}
                 // }, {duration:1500})
@@ -262,15 +265,20 @@
             cy.on('tapend mouseout', 'node', function(e){
                 // document.querySelector('#msg').value += (e.type)+"\n";
                 setResetFocus(e.cy);
-
+                var rank = pageRank.rank(e.target);
+                e.target.style('width', nodeMaxSize*rank+nodeMinSize);
+                e.target.style('height', nodeMaxSize*rank+nodeMinSize);
+                e.target.style('font-size', fontMaxSize*rank+fontMinSize);
             });
 
             cy.on('tapstart mouseover', 'node', function(e){
                 // document.querySelector('#msg').value += (e.type)+"\n";
                 setResetFocus(e.cy);
                 setOpacity(cy, 0);
-                setFocus(e.target, nodeSuccessorBGColor, edgeActiveBGColor, edgeActiveWidth, arrowActiveScale);
-
+                setFocus(e.target, successorColor, predecessorsColor, edgeActiveWidth, arrowActiveScale);
+                e.target.style('width', Math.max(parseFloat(e.target.style('width')), nodeActiveSize));
+                e.target.style('height', Math.max(parseFloat(e.target.style('height')), nodeActiveSize));
+                e.target.style('font-size', Math.max(parseFloat(e.target.style('font-size')), nodeActiveFontSize));
             });
 
             // web font가 로딩이 끝나면 강제로 redraw 합니다.
