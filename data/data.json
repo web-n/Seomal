@@ -369,5 +369,18 @@
       "source": "WEB7-LOGIN-WITH-FACEBOOK-ON-PASSPORT",
       "target": "WEB2-OAUTH"
     }
+  },
+  {
+    "data":{
+      "id": "WEB3-FACEBOOK-LOGIN",
+      "label":"Facebook Login"
+    }
+  },
+  {
+    "data":{
+      "id":"WEB2JAVASCRIPT--WEB3-FACEBOOK-LOGIN",
+      "source":"WEB3-FACEBOOK-LOGIN",
+      "target":"WEB2JAVASCRIPT"
+    }
   }
 ]
