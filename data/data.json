@@ -382,5 +382,12 @@
       "source":"WEB3-FACEBOOK-LOGIN",
       "target":"WEB2JAVASCRIPT"
     }
+  },
+  {
+    "data":{
+      "id":"WEB2-OAUTH--WEB3-FACEBOOK-LOGIN",
+      "source":"WEB3-FACEBOOK-LOGIN",
+      "target":"WEB2-OAUTH"
+    }
   }
 ]
