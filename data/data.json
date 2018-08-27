@@ -389,5 +389,25 @@
       "source":"WEB3-FACEBOOK-LOGIN",
       "target":"WEB2-OAUTH"
     }
+  },
+  {
+    "data":{
+      "id": "WEB3-GOOGLE-LOGIN",
+      "label":"Google Login"
+    }
+  },
+  {
+    "data":{
+      "id":"WEB2JAVASCRIPT--WEB3-GOOGLE-LOGIN",
+      "source":"WEB3-GOOGLE-LOGIN",
+      "target":"WEB2JAVASCRIPT"
+    }
+  },
+  {
+    "data":{
+      "id":"WEB2-OAUTH--WEB3-GOOGLE-LOGIN",
+      "source":"WEB3-GOOGLE-LOGIN",
+      "target":"WEB2-OAUTH"
+    }
   }
 ]
