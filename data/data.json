@@ -373,6 +373,7 @@
   {
     "data":{
       "id": "WEB3-FACEBOOK-LOGIN",
+      "url":"https://opentutorials.org/module/3698",
       "label":"Facebook Login"
     }
   },
@@ -393,6 +394,7 @@
   {
     "data":{
       "id": "WEB3-GOOGLE-LOGIN",
+      "url": "https://opentutorials.org/module/3705",
       "label":"Google Login"
     }
   },
