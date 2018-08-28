@@ -411,5 +411,26 @@
       "source":"WEB3-GOOGLE-LOGIN",
       "target":"WEB2-OAUTH"
     }
+  },
+  {
+    "data":{
+      "id": "WEB3-BEARER-AUTHENTICATION",
+      "url": "https://gist.github.com/egoing/cac3d6c8481062a7e7de327d3709505f",
+      "label":"bearer Authentication"
+    }
+  },
+  {
+    "data":{
+      "id":"WEB2-HTTP--WEB3-BEARER-AUTHENTICATION",
+      "source":"WEB3-BEARER-AUTHENTICATION",
+      "target":"WEB2-HTTP"
+    }
+  },
+  {
+    "data":{
+      "id":"WEB2-OAUTH--WEB3-BEARER-AUTHENTICATION",
+      "source":"WEB3-BEARER-AUTHENTICATION",
+      "target":"WEB2-OAUTH"
+    }
   }
 ]
