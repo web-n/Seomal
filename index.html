@@ -74,7 +74,7 @@
 
             function setFocus(target_element, successorsColor, predecessorsColor, edgeWidth, arrowScale){
                 target_element.style('background-color', nodeActiveBGColor);
-                setOpacityElement(target_element, 1);
+                target_element.style('color', fontColor);
                 target_element.successors().each(
                     function(e){
                         if(e.isEdge()){
@@ -94,6 +94,7 @@
                         e.style('width', edgeWidth);
                         e.style('arrow-scale', arrowScale);
                     }
+                    e.style('color',fontColor);
                     e.style('background-color',predecessorsColor);
                     e.style('line-color', predecessorsColor);
                     e.style('target-arrow-color', predecessorsColor);
@@ -112,6 +113,7 @@
             var fontMaxSize = 8;
             var fontMinSize = 5;
 
+            var dimColor = '#f4f4f8';
             var textOutlineColor = 'white';
             var fontColor = 'black';
             var nodeBGColor = '#4f5b66';
@@ -215,24 +217,32 @@
                 target_cy.edges().forEach(function(target){
                     setOpacityElement(target, degree);
                 });
+            }
+
+            function setStyle(target_cy, style){
+                target_cy.nodes().forEach(function(target){
+                    target.style(style);
+                });
+                target_cy.edges().forEach(function(target){
+                    target.style(style);
+                });
 
             }
 
             function setResetFocus(target_cy){
                 target_cy.nodes().forEach(function(target){
                     target.style('background-color', nodeBGColor);
-                    setOpacityElement(target, 1);
                     var rank = pageRank.rank(target);
                     target.style('width', nodeMaxSize*rank+nodeMinSize);
                     target.style('height', nodeMaxSize*rank+nodeMinSize);
                     target.style('font-size', fontMaxSize*rank+fontMinSize);
+                    target.style('color', fontColor);
                 });
                 target_cy.edges().forEach(function(target){
                     target.style('line-color', edgeBGColor);
                     target.style('target-arrow-color', edgeBGColor);
                     target.style('width', edgeWidth);
                     target.style('arrow-scale', arrowScale);
-                    setOpacityElement(target, 1);
                 });
 
             }
@@ -274,9 +284,13 @@
             });
 
             cy.on('tapstart mouseover', 'node', function(e){
-                // document.querySelector('#msg').value += (e.type)+"\n";
                 setResetFocus(e.cy);
-                setOpacity(cy, 0.4);
+                setStyle(cy, {
+                    'background-color':dimColor,
+                    'line-color':dimColor,
+                    'target-arrow-color':dimColor,
+                    'color':dimColor
+                });
                 setFocus(e.target, successorColor, predecessorsColor, edgeActiveWidth, arrowActiveScale);
             });
 
