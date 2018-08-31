@@ -39,6 +39,7 @@
     <script src="./lib/cytoscape.js-cose-bilkent-4.0.0/cytoscape-cose-bilkent.js"></script>
     <script src="cytoscape-cose-bilkent.js"></script>
     <!--<script src="lib/cytoscape.js-euler-1.2.1/cytoscape-euler.js"></script>-->
+    <script src="lib/TinyColor-1.0.0/tinycolor.js"></script>
     <script
             src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -82,9 +83,9 @@
                             e.style('arrow-scale', arrowScale);
                         }
                         e.style('color',fontColor);
-                        e.style('background-color',successorsColor);
-                        e.style('line-color', successorsColor);
-                        e.style('target-arrow-color', successorsColor);
+                        e.style('background-color',successorColor);
+                        e.style('line-color', successorColor);
+                        e.style('target-arrow-color', successorColor);
                         e.style('z-index', getMaxZIndex());
                         setOpacityElement(e, 1);
                     }
@@ -101,6 +102,14 @@
                     e.style('z-index', getMaxZIndex());
                     setOpacityElement(e, 1);
                 });
+                target_element.neighborhood().each(
+                    function(e){
+                        var empDegree = 30;
+                        e.style('background-color',tinycolor(e.style('background-color')).darken(empDegree).toString());
+                        e.style('line-color', tinycolor(e.style('line-color')).darken(empDegree).toString());
+                        e.style('target-arrow-color', tinycolor(e.style('target-arrow-color')).darken(empDegree).toString());
+                    }
+                );
                 target_element.style('z-index', getMaxZIndex());
                 target_element.style('width', Math.max(parseFloat(target_element.style('width')), nodeActiveSize));
                 target_element.style('height', Math.max(parseFloat(target_element.style('height')), nodeActiveSize));
@@ -121,8 +130,11 @@
             var edgeWidth = '0.3px';
             var arrowScale = 0.3
             var arrowActiveScale = 0.5
-            var successorColor = '#fe4a49';
-            var predecessorsColor = '#2ab7ca';
+            var successorColor = 'rgb(246, 176, 172)';
+            var successorWeakColor = '#ff8b94';
+            var predecessorsColor = 'rgb(140, 232, 250)';
+            var predecessorsWeakColor = '#4a91f2';
+
             var nodeActiveBGColor = '#fed766';
             var nodeActiveSize = 23;
             var nodeActiveFontSize = 7;
@@ -251,7 +263,6 @@
             if(home){
                 var _home = cy.$('#'+home);
                 setResetFocus(cy);
-                setOpacity(cy, 0.4);
                 setFocus(_home, successorColor, predecessorsColor, edgeActiveWidth, arrowActiveScale);
                 // cy.animate({
                 //     center:{eles:_home}
