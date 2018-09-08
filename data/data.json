@@ -432,5 +432,12 @@
       "source":"WEB3-BEARER-AUTHENTICATION",
       "target":"WEB2-OAUTH"
     }
-  }
+  },
+  {
+    "data":{
+      "id": "GIT1",
+      "url": "https://opentutorials.org/module/3733",
+      "label":"GIT1"
+    }
+  },
 ]
