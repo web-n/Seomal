@@ -437,7 +437,21 @@
     "data":{
       "id": "GIT1",
       "url": "https://opentutorials.org/module/3733",
-      "label":"GIT1"
+      "label":"Git1"
+    }
+  },
+  {
+    "data":{
+      "id": "GIT2-TORTOISEGIT-VERSION-CONTROL",
+      "url": "https://opentutorials.org/module/3736",
+      "label":"TortoiseGit-Version Control"
+    }
+  },
+  {
+    "data":{
+      "id":"GIT1--GIT2-TORTOISEGIT-VERSION-CONTROL",
+      "source":"GIT2-TORTOISEGIT-VERSION-CONTROL",
+      "target":"GIT1"
     }
   }
 ]
