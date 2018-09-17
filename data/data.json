@@ -453,5 +453,19 @@
       "source":"GIT2-TORTOISEGIT-VERSION-CONTROL",
       "target":"GIT1"
     }
+  },
+  {
+    "data":{
+      "id": "GIT2-SOURCETREE-VERSION-CONTROL",
+      "url": "https://opentutorials.org/module/3746",
+      "label":"SourceTree-Version Control"
+    }
+  },
+  {
+    "data":{
+      "id":"GIT1--GIT2-SOURCETREE-VERSION-CONTROL",
+      "source":"GIT2-SOURCETREE-VERSION-CONTROL",
+      "target":"GIT1"
+    }
   }
 ]
