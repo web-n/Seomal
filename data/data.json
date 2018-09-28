@@ -474,5 +474,26 @@
       "url": "https://opentutorials.org/module/3747",
       "label":"POSIX CLI1"
     }
+  },
+  {
+    "data":{
+      "id": "GIT2-CLI-VERSION-CONTROL",
+      "url": "https://opentutorials.org/module/3762",
+      "label":"GIT2-CLI Version Control"
+    }
+  },
+  {
+    "data":{
+      "id":"GIT1--GIT2-CLI-VERSION-CONTROL",
+      "source":"GIT2-CLI-VERSION-CONTROL",
+      "target":"GIT1"
+    }
+  },
+  {
+    "data":{
+      "id":"POSIX-CLI1--GIT2-CLI-VERSION-CONTROL",
+      "source":"GIT2-CLI-VERSION-CONTROL",
+      "target":"POSIX-CLI1"
+    }
   }
 ]
