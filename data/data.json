@@ -496,4 +496,52 @@
       "target":"POSIX-CLI1"
     }
   }
+
+  ,
+  {
+    "data":{
+      "id": "GIT3-CLI-BACKUP",
+      "url": "https://opentutorials.org/module/3801",
+      "label":"GIT CLI Backup"
+    }
+  },
+  {
+    "data":{
+      "id":"GIT2-CLI-VERSION-CONTROL-GIT3-CLI-BACKUP",
+      "source":"GIT3-CLI-BACKUP",
+      "target":"GIT2-CLI-VERSION-CONTROL"
+    }
+  }
+
+  ,
+  {
+    "data":{
+      "id": "GIT3-SOURCETREE-BACKUP",
+      "url": "https://opentutorials.org/module/3802",
+      "label":"GIT Sourcetree Backup"
+    }
+  },
+  {
+    "data":{
+      "id":"GIT3-SOURCETREE-VERSION-CONTROL--GIT3-SOURCETREE-BACKUP",
+      "source":"GIT3-SOURCETREE-BACKUP",
+      "target":"GIT2-SOURCETREE-VERSION-CONTROL"
+    }
+  }
+
+  ,
+  {
+    "data":{
+      "id": "GIT3-TORTOISEGIT-BACKUP",
+      "url": "https://opentutorials.org/module/3803",
+      "label":"GIT TortoiseGIT Backup"
+    }
+  },
+  {
+    "data":{
+      "id":"GIT2-TORTOISEGIT-VERSION-CONTROL--GIT3-TORTOISEGIT-BACKUP",
+      "source":"GIT3-TORTOISEGIT-BACKUP",
+      "target":"GIT2-TORTOISEGIT-VERSION-CONTROL"
+    }
+  }
 ]
