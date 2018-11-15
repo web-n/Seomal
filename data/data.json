@@ -1,5 +1,4 @@
-[
-  {
+[{
     "data": {
       "id": "WEB1",
       "url": "https://opentutorials.org/course/3084",
@@ -371,184 +370,196 @@
     }
   },
   {
-    "data":{
+    "data": {
       "id": "WEB3-FACEBOOK-LOGIN",
-      "url":"https://opentutorials.org/module/3698",
-      "label":"Facebook Login"
+      "url": "https://opentutorials.org/module/3698",
+      "label": "Facebook Login"
     }
   },
   {
-    "data":{
-      "id":"WEB2JAVASCRIPT--WEB3-FACEBOOK-LOGIN",
-      "source":"WEB3-FACEBOOK-LOGIN",
-      "target":"WEB2JAVASCRIPT"
+    "data": {
+      "id": "WEB2JAVASCRIPT--WEB3-FACEBOOK-LOGIN",
+      "source": "WEB3-FACEBOOK-LOGIN",
+      "target": "WEB2JAVASCRIPT"
     }
   },
   {
-    "data":{
-      "id":"WEB2-OAUTH--WEB3-FACEBOOK-LOGIN",
-      "source":"WEB3-FACEBOOK-LOGIN",
-      "target":"WEB2-OAUTH"
+    "data": {
+      "id": "WEB2-OAUTH--WEB3-FACEBOOK-LOGIN",
+      "source": "WEB3-FACEBOOK-LOGIN",
+      "target": "WEB2-OAUTH"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "WEB3-GOOGLE-LOGIN",
       "url": "https://opentutorials.org/module/3705",
-      "label":"Google Login"
+      "label": "Google Login"
     }
   },
   {
-    "data":{
-      "id":"WEB2JAVASCRIPT--WEB3-GOOGLE-LOGIN",
-      "source":"WEB3-GOOGLE-LOGIN",
-      "target":"WEB2JAVASCRIPT"
+    "data": {
+      "id": "WEB2JAVASCRIPT--WEB3-GOOGLE-LOGIN",
+      "source": "WEB3-GOOGLE-LOGIN",
+      "target": "WEB2JAVASCRIPT"
     }
   },
   {
-    "data":{
-      "id":"WEB2-OAUTH--WEB3-GOOGLE-LOGIN",
-      "source":"WEB3-GOOGLE-LOGIN",
-      "target":"WEB2-OAUTH"
+    "data": {
+      "id": "WEB2-OAUTH--WEB3-GOOGLE-LOGIN",
+      "source": "WEB3-GOOGLE-LOGIN",
+      "target": "WEB2-OAUTH"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "WEB3-BEARER-AUTHENTICATION",
       "url": "https://gist.github.com/egoing/cac3d6c8481062a7e7de327d3709505f",
-      "label":"Bearer Auth"
+      "label": "Bearer Auth"
     }
   },
   {
-    "data":{
-      "id":"WEB2-HTTP--WEB3-BEARER-AUTHENTICATION",
-      "source":"WEB3-BEARER-AUTHENTICATION",
-      "target":"WEB2-HTTP"
+    "data": {
+      "id": "WEB2-HTTP--WEB3-BEARER-AUTHENTICATION",
+      "source": "WEB3-BEARER-AUTHENTICATION",
+      "target": "WEB2-HTTP"
     }
   },
   {
-    "data":{
-      "id":"WEB2-OAUTH--WEB3-BEARER-AUTHENTICATION",
-      "source":"WEB3-BEARER-AUTHENTICATION",
-      "target":"WEB2-OAUTH"
+    "data": {
+      "id": "WEB2-OAUTH--WEB3-BEARER-AUTHENTICATION",
+      "source": "WEB3-BEARER-AUTHENTICATION",
+      "target": "WEB2-OAUTH"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "GIT1",
       "url": "https://opentutorials.org/module/3733",
-      "label":"Git1"
+      "label": "Git1"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "GIT2-TORTOISEGIT-VERSION-CONTROL",
       "url": "https://opentutorials.org/module/3736",
-      "label":"TortoiseGit-Version Control"
+      "label": "TortoiseGit-Version Control"
     }
   },
   {
-    "data":{
-      "id":"GIT1--GIT2-TORTOISEGIT-VERSION-CONTROL",
-      "source":"GIT2-TORTOISEGIT-VERSION-CONTROL",
-      "target":"GIT1"
+    "data": {
+      "id": "GIT1--GIT2-TORTOISEGIT-VERSION-CONTROL",
+      "source": "GIT2-TORTOISEGIT-VERSION-CONTROL",
+      "target": "GIT1"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "GIT2-SOURCETREE-VERSION-CONTROL",
       "url": "https://opentutorials.org/module/3746",
-      "label":"SourceTree-Version Control"
+      "label": "SourceTree-Version Control"
     }
   },
   {
-    "data":{
-      "id":"GIT1--GIT2-SOURCETREE-VERSION-CONTROL",
-      "source":"GIT2-SOURCETREE-VERSION-CONTROL",
-      "target":"GIT1"
+    "data": {
+      "id": "GIT1--GIT2-SOURCETREE-VERSION-CONTROL",
+      "source": "GIT2-SOURCETREE-VERSION-CONTROL",
+      "target": "GIT1"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "POSIX-CLI1",
       "url": "https://opentutorials.org/module/3747",
-      "label":"POSIX CLI1"
+      "label": "POSIX CLI1"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "GIT2-CLI-VERSION-CONTROL",
       "url": "https://opentutorials.org/module/3762",
-      "label":"GIT2-CLI Version Control"
+      "label": "GIT2-CLI Version Control"
     }
   },
   {
-    "data":{
-      "id":"GIT1--GIT2-CLI-VERSION-CONTROL",
-      "source":"GIT2-CLI-VERSION-CONTROL",
-      "target":"GIT1"
+    "data": {
+      "id": "GIT1--GIT2-CLI-VERSION-CONTROL",
+      "source": "GIT2-CLI-VERSION-CONTROL",
+      "target": "GIT1"
     }
   },
   {
-    "data":{
-      "id":"POSIX-CLI1--GIT2-CLI-VERSION-CONTROL",
-      "source":"GIT2-CLI-VERSION-CONTROL",
-      "target":"POSIX-CLI1"
+    "data": {
+      "id": "POSIX-CLI1--GIT2-CLI-VERSION-CONTROL",
+      "source": "GIT2-CLI-VERSION-CONTROL",
+      "target": "POSIX-CLI1"
     }
   }
 
   ,
   {
-    "data":{
+    "data": {
       "id": "GIT3-CLI-BACKUP",
       "url": "https://opentutorials.org/module/3801",
-      "label":"GIT CLI Backup"
+      "label": "GIT CLI Backup"
     }
   },
   {
-    "data":{
-      "id":"GIT2-CLI-VERSION-CONTROL-GIT3-CLI-BACKUP",
-      "source":"GIT3-CLI-BACKUP",
-      "target":"GIT2-CLI-VERSION-CONTROL"
+    "data": {
+      "id": "GIT2-CLI-VERSION-CONTROL-GIT3-CLI-BACKUP",
+      "source": "GIT3-CLI-BACKUP",
+      "target": "GIT2-CLI-VERSION-CONTROL"
     }
   }
 
   ,
   {
-    "data":{
+    "data": {
       "id": "GIT3-SOURCETREE-BACKUP",
       "url": "https://opentutorials.org/module/3802",
-      "label":"GIT Sourcetree Backup"
+      "label": "Sourcetree Backup"
     }
   },
   {
-    "data":{
-      "id":"GIT3-SOURCETREE-VERSION-CONTROL--GIT3-SOURCETREE-BACKUP",
-      "source":"GIT3-SOURCETREE-BACKUP",
-      "target":"GIT2-SOURCETREE-VERSION-CONTROL"
+    "data": {
+      "id": "GIT3-SOURCETREE-VERSION-CONTROL--GIT3-SOURCETREE-BACKUP",
+      "source": "GIT3-SOURCETREE-BACKUP",
+      "target": "GIT2-SOURCETREE-VERSION-CONTROL"
     }
-  }
-
-  ,
+  },
   {
-    "data":{
+    "data": {
       "id": "GIT3-TORTOISEGIT-BACKUP",
       "url": "https://opentutorials.org/module/3803",
-      "label":"GIT TortoiseGIT Backup"
+      "label": "TortoiseGIT Backup"
     }
   },
   {
-    "data":{
-      "id":"GIT2-TORTOISEGIT-VERSION-CONTROL--GIT3-TORTOISEGIT-BACKUP",
-      "source":"GIT3-TORTOISEGIT-BACKUP",
-      "target":"GIT2-TORTOISEGIT-VERSION-CONTROL"
+    "data": {
+      "id": "GIT2-TORTOISEGIT-VERSION-CONTROL--GIT3-TORTOISEGIT-BACKUP",
+      "source": "GIT3-TORTOISEGIT-BACKUP",
+      "target": "GIT2-TORTOISEGIT-VERSION-CONTROL"
     }
   },
   {
-    "data":{
+    "data": {
       "id": "AWS1",
       "url": "https://opentutorials.org/module/3814",
-      "label":"AWS1"
+      "label": "AWS1"
+    }
+  },
+  {
+    "data": {
+      "id": "AWS2S3",
+      "url": "https://opentutorials.org/module/3815",
+      "label": "S3"
+    }
+  },
+  {
+    "data": {
+      "id": "AWS1-AWS2S3",
+      "source": "AWS2S3",
+      "target": "AWS1"
     }
   }
 ]
