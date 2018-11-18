@@ -561,5 +561,27 @@
       "source": "AWS2S3",
       "target": "AWS1"
     }
+  },
+  {
+    "data": {
+      "id": "S3-WEB-HOSTING",
+      "url": "https://youtu.be/gOgmQlWwEcI",
+      "label": "S3 WEB Hosting"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB1--S3-WEB-HOSTING",
+      "source": "S3-WEB-HOSTING",
+      "target": "WEB1"
+    }
+  }
+  ,
+  {
+    "data": {
+      "id": "AWS2S3--S3-WEB-HOSTING",
+      "source": "S3-WEB-HOSTING",
+      "target": "AWS2S3"
+    }
   }
 ]
