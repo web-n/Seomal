@@ -583,5 +583,19 @@
       "source": "S3-WEB-HOSTING",
       "target": "AWS2S3"
     }
+  },
+  {
+    "data": {
+      "id": "WEB3-HTTP-CACHE",
+      "url": "https://opentutorials.org/module/3830",
+      "label": "HTTP Cache"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2-HTTP--WEB3-HTTP-CACHE",
+      "source": "WEB3-HTTP-CACHE",
+      "target": "WEB2-HTTP"
+    }
   }
 ]
