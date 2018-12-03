@@ -597,5 +597,27 @@
       "source": "WEB3-HTTP-CACHE",
       "target": "WEB2-HTTP"
     }
+  },
+  {
+    "data": {
+      "id": "AWS2-CLOUDFRONT",
+      "url": "https://opentutorials.org/module/3838",
+      "label": "CloudFront"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB3-HTTP-CACHE--AWS2-CLOUDFRONT",
+      "source": "AWS2-CLOUDFRONT",
+      "target": "WEB3-HTTP-CACHE"
+    }
+  }
+  ,
+  {
+    "data": {
+      "id": "AWS1--AWS2-CLOUDFRONT",
+      "source": "AWS2-CLOUDFRONT",
+      "target": "AWS1"
+    }
   }
 ]
