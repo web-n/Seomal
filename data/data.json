@@ -619,5 +619,27 @@
       "source": "AWS2-CLOUDFRONT",
       "target": "AWS1"
     }
+  },
+  {
+    "data": {
+      "id": "AWS2-RDS",
+      "url": "https://opentutorials.org/module/3860",
+      "label": "RDS"
+    }
+  },
+  {
+    "data": {
+      "id": "DATABASE2MYSQL--AWS2-RDS",
+      "source": "AWS2-RDS",
+      "target": "DATABASE2MYSQL"
+    }
+  }
+  ,
+  {
+    "data": {
+      "id": "AWS1--AWS2-RDS",
+      "source": "AWS2-RDS",
+      "target": "AWS1"
+    }
   }
 ]
