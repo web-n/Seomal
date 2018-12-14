@@ -1,0 +1,26 @@
+{
+  "name": "seomal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-n/SerieseN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-n/SerieseN/issues"
+  },
+  "homepage": "https://github.com/web-n/SerieseN#readme",
+  "dependencies": {
+    "cytoscape": "^3.3.0",
+    "cytoscape-cose-bilkent": "^4.0.0"
+  }
+}
