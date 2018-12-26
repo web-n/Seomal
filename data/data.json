@@ -641,5 +641,27 @@
       "source": "AWS2-RDS",
       "target": "AWS1"
     }
+  },
+  {
+    "data": {
+      "id": "AWS2-ROUTE53",
+      "url": "https://opentutorials.org/module/3898",
+      "label": "Route 53"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2DNS--AWS2-ROUTE53",
+      "source": "AWS2-ROUTE53",
+      "target": "WEB2DNS"
+    }
+  }
+  ,
+  {
+    "data": {
+      "id": "AWS1--AWS2-ROUTE53",
+      "source": "AWS2-ROUTE53",
+      "target": "AWS1"
+    }
   }
 ]
