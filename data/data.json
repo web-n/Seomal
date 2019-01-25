@@ -575,8 +575,7 @@
       "source": "S3-WEB-HOSTING",
       "target": "WEB1"
     }
-  }
-  ,
+  },
   {
     "data": {
       "id": "AWS2S3--S3-WEB-HOSTING",
@@ -611,8 +610,7 @@
       "source": "AWS2-CLOUDFRONT",
       "target": "WEB3-HTTP-CACHE"
     }
-  }
-  ,
+  },
   {
     "data": {
       "id": "AWS1--AWS2-CLOUDFRONT",
@@ -633,8 +631,7 @@
       "source": "AWS2-RDS",
       "target": "DATABASE2MYSQL"
     }
-  }
-  ,
+  },
   {
     "data": {
       "id": "AWS1--AWS2-RDS",
@@ -655,13 +652,54 @@
       "source": "AWS2-ROUTE53",
       "target": "WEB2DNS"
     }
-  }
-  ,
+  },
   {
     "data": {
       "id": "AWS1--AWS2-ROUTE53",
       "source": "AWS2-ROUTE53",
       "target": "AWS1"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BRANCH_CONFLICT",
+      "url": "https://opentutorials.org/module/3927",
+      "label": "GIT CLI - Branch & Conflict"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT2-CLI-VERSION-CONTROL--GIT3-CLI-BRANCH_CONFLICT",
+      "source": "GIT3-CLI-BRANCH_CONFLICT",
+      "target": "GIT2-CLI-VERSION-CONTROL"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-SOURCETREE-BRANCH_CONFLICT",
+      "url": "https://opentutorials.org/module/3928",
+      "label": "GIT Sourcetree - Branch & Conflict"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT2-CLI-VERSION-CONTROL--GIT3-CLI-BRANCH_CONFLICT",
+      "source": "GIT3-SOURCETREE-BRANCH_CONFLICT",
+      "target": "GIT2-SOURCETREE-VERSION-CONTROL"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-TORTOISEGIT-BRANCH_CONFLICT",
+      "url": "https://opentutorials.org/module/3929",
+      "label": "GIT TortoiseGit - Branch & Conflict"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT2-CLI-VERSION-CONTROL--GIT3-CLI-BRANCH_CONFLICT",
+      "source": "GIT3-TORTOISEGIT-BRANCH_CONFLICT",
+      "target": "GIT2-TORTOISEGIT-VERSION-CONTROL"
     }
   }
 ]
