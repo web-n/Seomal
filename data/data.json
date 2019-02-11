@@ -701,5 +701,26 @@
       "source": "GIT3-TORTOISEGIT-BRANCH_CONFLICT",
       "target": "GIT2-TORTOISEGIT-VERSION-CONTROL"
     }
+  },
+  {
+    "data": {
+      "id": "GIT4-CLI-COLLABORATION",
+      "url": "https://opentutorials.org/module/3967",
+      "label": "GIT CLI - Collaboration"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BRANCH_CONFLICT--GIT4-CLI-COLLABORATION",
+      "source": "GIT4-CLI-COLLABORATION",
+      "target": "GIT3-CLI-BRANCH_CONFLICT"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BACKUP--GIT4-CLI-COLLABORATION",
+      "source": "GIT4-CLI-COLLABORATION",
+      "target": "GIT3-CLI-BACKUP"
+    }
   }
 ]
