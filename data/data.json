@@ -722,5 +722,26 @@
       "source": "GIT4-CLI-COLLABORATION",
       "target": "GIT3-CLI-BACKUP"
     }
+  },
+  {
+    "data": {
+      "id": "GIT4-SOURCETREE-COLLABORATION",
+      "url": "https://opentutorials.org/module/3991",
+      "label": "GIT SourceTree - Collaboration"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BRANCH_CONFLICT--GIT4-SOURCETREE-COLLABORATION",
+      "source": "GIT4-SOURCETREE-COLLABORATION",
+      "target": "GIT3-SOURCETREE-BRANCH_CONFLICT"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BACKUP--GIT4-SOURCETREE-COLLABORATION",
+      "source": "GIT4-SOURCETREE-COLLABORATION",
+      "target": "GIT3-SOURCETREE-BACKUP"
+    }
   }
 ]
