@@ -743,5 +743,26 @@
       "source": "GIT4-SOURCETREE-COLLABORATION",
       "target": "GIT3-SOURCETREE-BACKUP"
     }
+  },
+  {
+    "data": {
+      "id": "GIT4-TORTOISEGIT-COLLABORATION",
+      "url": "https://opentutorials.org/module/3994",
+      "label": "GIT TORTOISEGIT - Collaboration"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BRANCH_CONFLICT--GIT4-TORTOISEGIT-COLLABORATION",
+      "source": "GIT4-TORTOISEGIT-COLLABORATION",
+      "target": "GIT3-TORTOISEGIT-BRANCH_CONFLICT"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BACKUP--GIT4-TORTOISEGIT-COLLABORATION",
+      "source": "GIT4-TORTOISEGIT-COLLABORATION",
+      "target": "GIT3-TORTOISEGIT-BACKUP"
+    }
   }
 ]
