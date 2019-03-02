@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.plugins.animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.layout.noverlap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.layout.forceAtlas2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/plugins/sigma.plugins.dragNodes.min.js"></script>
+</head>
+
+<body>
+    <style>
+        #graph-container {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
+    </style>
+    <div id="graph-container"></div>
+    <script>
+        var i,
+            s,
+            N = 100,
+            E = 500,
+            g = {
+                nodes: [],
+                edges: []
+            };
+
+        function fromCy(){
+            fetch('data/data.json')
+            .then(function (raw) {
+                return raw.json();
+            })
+            .then(function (result) {
+                for (var name in result) {
+                    var node = result[name].data;
+                    if (node.label) {
+                        g.nodes.push({
+                            id: node.id,
+                            label: node.label,
+                            x: Math.random(),
+                            y: Math.random(),
+                            size: Math.random(),
+                            color: '#666'
+                        });
+                    } else {
+                        g.edges.push({
+                            id: node.id,
+                            source: node.source,
+                            target: node.target,
+                            size: Math.random(),
+                            color: '#cc'
+                        });
+                    }
+                }
+
+                s = new sigma({
+                    graph: g,
+                    container: 'graph-container',
+                    settings: {
+                        minNodeSize: 3,
+                        maxNodeSize: 20
+                    }
+                });
+                s.bind('clickNode', function (e) {
+                    var data = {
+                        nodes:s.graph.nodes(),
+                        edges:s.graph.edges()
+                    }
+                    console.log(JSON.stringify(data));
+                });
+                var dragListener = sigma.plugins.dragNodes(s, s.renderers[0]);
+            })
+        }
+
+        function fromSigma(){
+            fetch('data/data.sigma.json')
+            .then(function (raw) {
+                return raw.json();
+            })
+            .then(function (result) {
+                s = new sigma({
+                    graph: result,
+                    container: 'graph-container',
+                    settings: {
+                        minNodeSize: 3,
+                        maxNodeSize: 20
+                    }
+                });
+                s.bind('clickNode', function (e) {
+                    var data = {
+                        nodes:s.graph.nodes(),
+                        edges:s.graph.edges()
+                    }
+                    console.log(JSON.stringify(data));
+                });
+                var dragListener = sigma.plugins.dragNodes(s, s.renderers[0]);
+                // s.startForceAtlas2();
+            })
+        }
+
+        fromSigma();
+    </script>
+</body>
+
+</html>
