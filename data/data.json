@@ -1,4 +1,5 @@
-[{
+[
+  {
     "data": {
       "id": "WEB1",
       "url": "https://opentutorials.org/course/3084",
@@ -494,9 +495,7 @@
       "source": "GIT2-CLI-VERSION-CONTROL",
       "target": "POSIX-CLI1"
     }
-  }
-
-  ,
+  },
   {
     "data": {
       "id": "GIT3-CLI-BACKUP",
@@ -510,9 +509,7 @@
       "source": "GIT3-CLI-BACKUP",
       "target": "GIT2-CLI-VERSION-CONTROL"
     }
-  }
-
-  ,
+  },
   {
     "data": {
       "id": "GIT3-SOURCETREE-BACKUP",
@@ -721,6 +718,48 @@
       "id": "GIT3-CLI-BACKUP--GIT4-CLI-COLLABORATION",
       "source": "GIT4-CLI-COLLABORATION",
       "target": "GIT3-CLI-BACKUP"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT4-SOURCETREE-COLLABORATION",
+      "url": "https://opentutorials.org/module/3991",
+      "label": "GIT SourceTree - Collaboration"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BRANCH_CONFLICT--GIT4-SOURCETREE-COLLABORATION",
+      "source": "GIT4-SOURCETREE-COLLABORATION",
+      "target": "GIT3-SOURCETREE-BRANCH_CONFLICT"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BACKUP--GIT4-SOURCETREE-COLLABORATION",
+      "source": "GIT4-SOURCETREE-COLLABORATION",
+      "target": "GIT3-SOURCETREE-BACKUP"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT4-TORTOISEGIT-COLLABORATION",
+      "url": "https://opentutorials.org/module/3994",
+      "label": "GIT TORTOISEGIT - Collaboration"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BRANCH_CONFLICT--GIT4-TORTOISEGIT-COLLABORATION",
+      "source": "GIT4-TORTOISEGIT-COLLABORATION",
+      "target": "GIT3-TORTOISEGIT-BRANCH_CONFLICT"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BACKUP--GIT4-TORTOISEGIT-COLLABORATION",
+      "source": "GIT4-TORTOISEGIT-COLLABORATION",
+      "target": "GIT3-TORTOISEGIT-BACKUP"
     }
   },
   {
