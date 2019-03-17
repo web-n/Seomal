@@ -722,5 +722,19 @@
       "source": "GIT4-CLI-COLLABORATION",
       "target": "GIT3-CLI-BACKUP"
     }
+  },
+  {
+    "data": {
+      "id": "GIT4-CLI-CHERRY_PICK-REBASE",
+      "url": "https://opentutorials.org/module/4015",
+      "label": "GIT cherry-pick & rebase"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BRANCH_CONFLICT--GIT4-CLI-CHERRY_PICK-REBASE",
+      "source": "GIT4-CLI-CHERRY_PICK-REBASE",
+      "target": "GIT3-CLI-BRANCH_CONFLICT"
+    }
   }
 ]
