@@ -775,5 +775,19 @@
       "source": "GIT4-CLI-CHERRY_PICK-REBASE",
       "target": "GIT3-CLI-BRANCH_CONFLICT"
     }
+  },
+  {
+    "data": {
+      "id": "GIT4-CLI-RESET--REVERT",
+      "url": "https://opentutorials.org/module/4032",
+      "label": "GIT reset & revert
+    }
+  },
+  {
+    "data": {
+      "id": "GIT3-CLI-BRANCH_CONFLICT--GIT4-CLI-RESET--REVERT",
+      "source": "GIT4-CLI-RESET--REVERT",
+      "target": "GIT3-CLI-BRANCH_CONFLICT"
+    }
   }
 ]
