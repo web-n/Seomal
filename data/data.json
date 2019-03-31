@@ -789,5 +789,19 @@
       "source": "GIT4-CLI-RESET--REVERT",
       "target": "GIT3-CLI-BRANCH_CONFLICT"
     }
+  },
+  {
+    "data": {
+      "id": "AWS2-EDUCATE",
+      "url": "https://opentutorials.org/module/4041",
+      "label": "AWS Educate"
+    }
+  },
+  {
+    "data": {
+      "id": "AWS1--AWS2-EDUCATE",
+      "source": "AWS2-EDUCATE",
+      "target": "AWS1"
+    }
   }
 ]
