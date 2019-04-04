@@ -803,5 +803,19 @@
       "source": "AWS2-EDUCATE",
       "target": "AWS1"
     }
+  },
+  {
+    "data": {
+      "id": "NPM1",
+      "url": "https://opentutorials.org/module/4044",
+      "label": "NPM1"
+    }
+  },
+  {
+    "data": {
+      "id": "POSIX-CLI1--NPM1",
+      "source": "NPM1",
+      "target": "POSIX-CLI1"
+    }
   }
 ]
