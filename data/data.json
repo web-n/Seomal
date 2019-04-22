@@ -820,7 +820,7 @@
   },
   {
     "data": {
-      "id": "JavaScript-Object-Oriented-Programming",
+      "id": "JavaScript-Object-Oriented-Programming-1",
       "url": "https://opentutorials.org/module/4047",
       "label": "JavaScript Object Oriented Programming"
     }
@@ -828,14 +828,35 @@
   {
     "data": {
       "id": "WEB2JAVASCRIPT--JavaScript-Object-Oriented-Programming",
-      "source": "JavaScript-Object-Oriented-Programming",
+      "source": "JavaScript-Object-Oriented-Programming-1",
       "target": "WEB2JAVASCRIPT"
     }
   },
   {
     "data": {
+      "id": "REACT",
+      "url": "https://opentutorials.org/module/4058",
+      "label": "React"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2JAVASCRIPT--REACT",
+      "source": "REACT",
+      "target": "WEB2JAVASCRIPT"
+    }
+  },
+  {
+    "data": {
+      "id": "JavaScript-Object-Oriented-Programming-2",
+      "url": "https://opentutorials.org/module/4047",
+      "label": "JavaScript Object Oriented Programming"
+    }
+  },
+  {
+    "data": {
       "id": "WEB2NODEJS--JavaScript-Object-Oriented-Programming",
-      "source": "JavaScript-Object-Oriented-Programming",
+      "source": "JavaScript-Object-Oriented-Programming-2",
       "target": "WEB2NODEJS"
     }
   }
