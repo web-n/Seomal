@@ -870,7 +870,7 @@
   {
     "data": {
       "id": "WEB2NODEJS--JavaScript-Immutability",
-      "source": "JavaScript-Immutability",
+      "source": "JavaScript-Immutability2",
       "target": "WEB2NODEJS"
     }
   },
@@ -884,7 +884,7 @@
   {
     "data": {
       "id": "WEB2JAVASCRIPT--JavaScript-Immutability",
-      "source": "JavaScript-Immutability",
+      "source": "JavaScript-Immutability1",
       "target": "WEB2JAVASCRIPT"
     }
   }
