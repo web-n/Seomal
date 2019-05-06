@@ -822,7 +822,7 @@
     "data": {
       "id": "JavaScript-Object-Oriented-Programming-1",
       "url": "https://opentutorials.org/module/4047",
-      "label": "JavaScript Object Oriented Programming"
+      "label": "JS Object Oriented Programming"
     }
   },
   {
@@ -850,7 +850,7 @@
     "data": {
       "id": "JavaScript-Object-Oriented-Programming-2",
       "url": "https://opentutorials.org/module/4047",
-      "label": "JavaScript Object Oriented Programming"
+      "label": "JS Object Oriented Programming"
     }
   },
   {
@@ -858,6 +858,34 @@
       "id": "WEB2NODEJS--JavaScript-Object-Oriented-Programming",
       "source": "JavaScript-Object-Oriented-Programming-2",
       "target": "WEB2NODEJS"
+    }
+  },
+  {
+    "data": {
+      "id": "JavaScript-Immutability2",
+      "url": "https://opentutorials.org/module/4075",
+      "label": "JS Immutability"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2NODEJS--JavaScript-Immutability",
+      "source": "JavaScript-Immutability",
+      "target": "WEB2NODEJS"
+    }
+  },
+  {
+    "data": {
+      "id": "JavaScript-Immutability1",
+      "url": "https://opentutorials.org/module/4075",
+      "label": "JS Immutability"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2JAVASCRIPT--JavaScript-Immutability",
+      "source": "JavaScript-Immutability",
+      "target": "WEB2JAVASCRIPT"
     }
   }
 ]
