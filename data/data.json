@@ -887,5 +887,19 @@
       "source": "JavaScript-Immutability1",
       "target": "WEB2JAVASCRIPT"
     }
+  },
+  {
+    "data": {
+      "id": "REDUX",
+      "url": "https://opentutorials.org/module/4078",
+      "label": "Redux"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2JAVASCRIPT--REDUX",
+      "source": "REDUX",
+      "target": "WEB2JAVASCRIPT"
+    }
   }
 ]
