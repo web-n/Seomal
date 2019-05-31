@@ -915,5 +915,19 @@
       "source": "SQL-JOIN",
       "target": "DATABASE2MYSQL"
     }
+  },
+  {
+    "data": {
+      "id": "BLIND-CALENDAR",
+      "url": "https://opentutorials.org/course/2897/25237",
+      "label": "칼린더 이름 감추기"
+    }
+  },
+  {
+    "data": {
+      "id": "WEB2JAVASCRIPT--BLIND-CALENDAR",
+      "source": "blind-calendar",
+      "target": "WEB2JAVASCRIPT"
+    }
   }
 ]
