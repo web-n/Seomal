@@ -929,5 +929,19 @@
       "source": "BLIND-CALENDAR",
       "target": "WEB2JAVASCRIPT"
     }
+  },
+  {
+    "data": {
+      "id": "RDB-MODELING",
+      "url": "https://opentutorials.org/module/4134",
+      "label": "Relational Data Modeling"
+    }
+  },
+  {
+    "data": {
+      "id": "DATABASE2MYSQL--RDB-MODELING",
+      "source": "RDB-MODELING",
+      "target": "DATABASE2MYSQL"
+    }
   }
 ]
