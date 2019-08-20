@@ -960,7 +960,7 @@
   },
   {
     "data": {
-      "id": "RDB-MODELING",
+      "id": "RDB-MODELING-ORACLE",
       "url": "https://opentutorials.org/module/4134",
       "label": "Relational Data Modeling"
     }
@@ -968,13 +968,13 @@
   {
     "data": {
       "id": "DATABASE2MYSQL--RDB-MODELING",
-      "source": "RDB-MODELING",
+      "source": "RDB-MODELING-ORACLE",
       "target": "Oracle"
     }
   },
   {
     "data": {
-      "id": "SQL-JOIN",
+      "id": "SQL-JOIN-ORACLE",
       "url": "https://opentutorials.org/module/4118",
       "label": "SQL JOIN"
     }
@@ -982,7 +982,7 @@
   {
     "data": {
       "id": "ORACLE--SQL-JOIN",
-      "source": "SQL-JOIN",
+      "source": "SQL-JOIN-ORACLE",
       "target": "ORACLE"
     }
   }
