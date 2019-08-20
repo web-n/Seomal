@@ -967,9 +967,9 @@
   },
   {
     "data": {
-      "id": "DATABASE2MYSQL--RDB-MODELING",
+      "id": "ORACLE--RDB-MODELING",
       "source": "RDB-MODELING-ORACLE",
-      "target": "Oracle"
+      "target": "ORACLE"
     }
   },
   {
