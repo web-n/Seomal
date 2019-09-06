@@ -985,5 +985,19 @@
       "source": "SQL-JOIN-ORACLE",
       "target": "ORACLE"
     }
+  },
+  {
+    "data": {
+      "id": "GIT-INTERACTIVE-REBASE",
+      "url": "https://www.youtube.com/watch?v=ZMoB1SZ4Ceg&feature=youtu.be",
+      "label": "GIT - interactive rebase"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT4-CLI-CHERRY_PICK-REBASE--GIT-INTERACTIVE-REBASE",
+      "source": "GIT-INTERACTIVE-REBASE",
+      "target": "GIT4-CLI-CHERRY_PICK-REBASE"
+    }
   }
 ]
