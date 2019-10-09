@@ -999,5 +999,12 @@
       "source": "GIT-INTERACTIVE-REBASE",
       "target": "GIT4-CLI-CHERRY_PICK-REBASE"
     }
+  },
+  {
+    "data": {
+      "id": "JAVA1",
+      "url": "https://opentutorials.org/module/4294",
+      "label": "JAVA1"
+    }
   }
 ]
