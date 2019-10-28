@@ -1010,8 +1010,8 @@
   {
     "data": {
       "id": "JAVA-FLOW-CONTROL--JAVA1",
-      "source": "JAVA1",
-      "target": "JAVA-FLOW-CONTROL"
+      "source": "JAVA-FLOW-CONTROL",
+      "target": "JAVA1"
     }
   },
   {
