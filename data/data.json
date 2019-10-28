@@ -1005,6 +1005,20 @@
       "id": "JAVA1",
       "url": "https://opentutorials.org/module/4294",
       "label": "JAVA1"
+    } 
+  },
+  {
+    "data": {
+      "id": "JAVA-FLOW-CONTROL--JAVA1",
+      "source": "JAVA1",
+      "target": "JAVA-FLOW-CONTROL"
     }
+  },
+  {
+    "data": {
+      "id": "JAVA-FLOW-CONTROL",
+      "url": "https://opentutorials.org/module/4378",
+      "label": "JAVA 제어문"
+    } 
   }
 ]
