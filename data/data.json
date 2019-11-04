@@ -1020,5 +1020,19 @@
       "url": "https://opentutorials.org/module/4378",
       "label": "JAVA 제어문"
     } 
+  },
+  {
+    "data": {
+      "id": "JAVA-METHOD--JAVA1",
+      "source": "JAVA-METHOD",
+      "target": "JAVA1"
+    }
+  },
+  {
+    "data": {
+      "id": "JAVA-METHOD",
+      "url": "https://opentutorials.org/module/4397",
+      "label": "JAVA method"
+    } 
   }
 ]
