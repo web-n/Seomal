@@ -1034,5 +1034,19 @@
       "url": "https://opentutorials.org/module/4397",
       "label": "JAVA method"
     } 
+  },
+  {
+    "data": {
+      "id": "OOP-JAVA-METHOD",
+      "source": "JAVA-OOP",
+      "target": "JAVA-METHOD"
+    }
+  },
+  {
+    "data": {
+      "id": "JAVA-OOP",
+      "url": "https://opentutorials.org/module/4406",
+      "label": "JAVA method"
+    } 
   }
 ]
