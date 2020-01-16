@@ -1048,5 +1048,33 @@
       "url": "https://opentutorials.org/module/4406",
       "label": "JAVA 객체 지향 프로그래밍"
     } 
+  },
+  {
+    "data": {
+      "id": "CYBER-CHEF",
+      "url": "https://www.youtube.com/watch?v=jNezME84zMI",
+      "label": "CyberChef"
+    } 
+  },
+  {
+    "data": {
+      "id": "REACT-REDUX",
+      "url": "https://opentutorials.org/module/4518",
+      "label": "REACT REDUX"
+    } 
+  },
+  {
+    "data": {
+      "id": "REACT_REDUX-REACT",
+      "source": "REACT-REDUX",
+      "target": "REACT"
+    }
+  },
+  {
+    "data": {
+      "id": "REACT_REDUX-REDUX",
+      "source": "REACT-REDUX",
+      "target": "REDUX"
+    }
   }
 ]
