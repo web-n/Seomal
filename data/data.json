@@ -1076,5 +1076,12 @@
       "source": "REACT-REDUX",
       "target": "REDUX"
     }
+  },
+  {
+    "data": {
+      "id": "REACT-REDUX-WORKSHOP",
+      "url": "https://www.youtube.com/watch?v=Cwwsv_OaWhM",
+      "label": "REACT REDUX Workshop"
+    } 
   }
 ]
