@@ -1083,5 +1083,12 @@
       "url": "https://www.youtube.com/watch?v=Cwwsv_OaWhM",
       "label": "REACT REDUX Workshop"
     } 
+  },
+  {
+    "data": {
+      "id": "REDUX-REDUX--REACT-REDUX-WORKSHOP",
+      "source": "REACT-REDUX-WORKSHOP",
+      "target": "REACT-REDUX"
+    }
   }
 ]
