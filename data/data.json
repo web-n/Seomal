@@ -1090,5 +1090,19 @@
       "source": "REACT-REDUX-WORKSHOP",
       "target": "REACT-REDUX"
     }
+  },
+  {
+    "data": {
+      "id": "GIT-BISECT",
+      "url": "https://www.youtube.com/watch?v=-UERw--siBw",
+      "label": "GIT bisect"
+    } 
+  },
+  {
+    "data": {
+      "id": "GIT-BISECT--GIT2-CLI-VERSION-CONTROL",
+      "source": "GIT-BISECT",
+      "target": "GIT2-CLI-VERSION-CONTROL"
+    }
   }
 ]
