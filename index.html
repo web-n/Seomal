@@ -158,7 +158,8 @@
             cy = cytoscape({
                 container: document.getElementById('cy'), // container to render in
                 elements: data,
-                minZoom:0.3,
+                minZoom:0.2,
+                wheelSensitivity:0.1,
                 style: [ // the stylesheet for the graph
                     {
                         selector: 'node',
