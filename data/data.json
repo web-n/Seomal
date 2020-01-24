@@ -1104,5 +1104,26 @@
       "source": "GIT-BISECT",
       "target": "GIT2-CLI-VERSION-CONTROL"
     }
+  },
+  {
+    "data": {
+      "id": "REACT-AJAX",
+      "url": "https://opentutorials.org/module/4549",
+      "label": "React & Ajax"
+    } 
+  },
+  {
+    "data": {
+      "id": "REACT-AJAX--WEB3AJAX",
+      "source": "REACT-AJAX",
+      "target": "WEB3AJAX"
+    }
+  },
+  {
+    "data": {
+      "id": "REACT-AJAX--REACT",
+      "source": "REACT-AJAX",
+      "target": "REACT"
+    }
   }
 ]
