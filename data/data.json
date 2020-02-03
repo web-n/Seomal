@@ -1126,4 +1126,26 @@
       "target": "REACT"
     }
   }
+  ,
+  {
+    "data": {
+      "id": "WEBPACK",
+      "url": "https://opentutorials.org/module/4566",
+      "label": "Webpack"
+    } 
+  },
+  {
+    "data": {
+      "id": "WEBPACK--NPM1",
+      "source": "WEBPACK",
+      "target": "NPM1"
+    }
+  },
+  {
+    "data": {
+      "id": "WEBPACK--WEB2JAVASCRIPT",
+      "source": "WEBPACK",
+      "target": "WEB2JAVASCRIPT"
+    }
+  }
 ]
