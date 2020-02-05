@@ -1147,5 +1147,19 @@
       "source": "WEBPACK",
       "target": "WEB2JAVASCRIPT"
     }
+  },
+  {
+    "data": {
+      "id": "NPM-PACKAGE",
+      "url": "https://opentutorials.org/module/4571",
+      "label": "NPM Package"
+    } 
+  },
+  {
+    "data": {
+      "id": "NPM-PACKAGE--WEB2NODEJS",
+      "source": "NPM-PACKAGE",
+      "target": "WEB2NODEJS"
+    }
   }
 ]
