@@ -1161,5 +1161,33 @@
       "source": "NPM-PACKAGE",
       "target": "WEB2NODEJS"
     }
+  },
+  {
+    "data": {
+      "id": "NPM-IN-THE-SHELL--NODE",
+      "url": "https://www.youtube.com/watch?v=2m4iTjdgbMU",
+      "label": "NPM in the console"
+    } 
+  },
+  {
+    "data": {
+      "id": "NPM-IN-THE-SHELL--NODE--WEB2NODEJS",
+      "source": "NPM-IN-THE-SHELL--NODE",
+      "target": "WEB2NODEJS"
+    }
+  },
+  {
+    "data": {
+      "id": "NPM-IN-THE-SHELL--JS",
+      "url": "https://www.youtube.com/watch?v=2m4iTjdgbMU",
+      "label": "NPM in the console"
+    } 
+  },
+  {
+    "data": {
+      "id": "NPM-IN-THE-SHELL--NODE--JS",
+      "source": "NPM-IN-THE-SHELL--JS",
+      "target": "WEB2JAVASCRIPT"
+    }
   }
 ]
