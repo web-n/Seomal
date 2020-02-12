@@ -1189,5 +1189,19 @@
       "source": "NPM-IN-THE-SHELL--JS",
       "target": "WEB2JAVASCRIPT"
     }
+  },
+  {
+    "data": {
+      "id": "REACT-CLASS-VS-FUNCTIONAL-STYLE",
+      "url": "https://opentutorials.org/module/4566",
+      "label": "React class vs functional style"
+    } 
+  },
+  {
+    "data": {
+      "id": "REACT-CLASS-VS-FUNCTIONAL-STYLE--REACT",
+      "source": "REACT-CLASS-VS-FUNCTIONAL-STYLE",
+      "target": "REACT"
+    }
   }
 ]
