@@ -1203,5 +1203,19 @@
       "source": "REACT-CLASS-VS-FUNCTIONAL-STYLE",
       "target": "REACT"
     }
+  },
+  {
+    "data": {
+      "id": "REACT-ROUTE-DOM",
+      "url": "https://youtu.be/WLdbsl9UwDc",
+      "label": "React Route DOM"
+    } 
+  },
+  {
+    "data": {
+      "id": "REACT-ROUTE-DOM--REACT",
+      "source": "REACT-ROUTE-DOM",
+      "target": "REACT"
+    }
   }
 ]
