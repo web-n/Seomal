@@ -1206,15 +1206,15 @@
   },
   {
     "data": {
-      "id": "REACT-ROUTE-DOM",
+      "id": "REACT-ROUTER-DOM",
       "url": "https://youtu.be/WLdbsl9UwDc",
-      "label": "React Route DOM"
+      "label": "React Router"
     } 
   },
   {
     "data": {
-      "id": "REACT-ROUTE-DOM--REACT",
-      "source": "REACT-ROUTE-DOM",
+      "id": "REACT-ROUTER-DOM--REACT",
+      "source": "REACT-ROUTER-DOM",
       "target": "REACT"
     }
   }
