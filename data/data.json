@@ -1217,5 +1217,19 @@
       "source": "REACT-ROUTER-DOM",
       "target": "REACT"
     }
+  },
+  {
+    "data": {
+      "id": "CREATE-REACT-APP--PROXY",
+      "url": "https://www.youtube.com/watch?v=VaAWIAxvj0A&t=155s",
+      "label": "CreateReactApp Proxy"
+    } 
+  },
+  {
+    "data": {
+      "id": "CREATE-REACT-APP--PROXY--REACT-AJAX",
+      "source": "CREATE-REACT-APP--PROXY",
+      "target": "REACT-AJAX"
+    }
   }
 ]
