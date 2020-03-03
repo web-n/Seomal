@@ -1231,5 +1231,12 @@
       "source": "CREATE-REACT-APP--PROXY",
       "target": "REACT-AJAX"
     }
+  },
+  {
+    "data": {
+      "id": "GITHUB",
+      "url": "https://opentutorials.org/module/4636",
+      "label": "github.com"
+    } 
   }
 ]
