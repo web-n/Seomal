@@ -1238,5 +1238,19 @@
       "url": "https://opentutorials.org/module/4636",
       "label": "github.com"
     } 
+  },
+  {
+    "data": {
+      "id": "GITHUB-ACTION",
+      "url": "https://youtu.be/uBOdEEzjxzE",
+      "label": "github action"
+    }
+  },
+  {
+    "data": {
+      "id": "GITHUB-ACTION--GITHUB",
+      "source": "GITHUB-ACTION",
+      "target": "GITHUB"
+    }
   }
 ]
