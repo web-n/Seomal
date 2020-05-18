@@ -1252,5 +1252,19 @@
       "source": "GITHUB-ACTION",
       "target": "GITHUB"
     }
+  },
+  {
+    "data": {
+      "id": "AIRTABLE",
+      "url": "https://opentutorials.org/module/4784",
+      "label": "Airtable"
+    }
+  },
+  {
+    "data": {
+      "id": "AIRTABLE--DATABASE1",
+      "source": "AIRTABLE",
+      "target": "DATABASE1"
+    }
   }
 ]
