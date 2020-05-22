@@ -1266,5 +1266,19 @@
       "source": "AIRTABLE",
       "target": "DATABASE1"
     }
+  },
+  {
+    "data": {
+      "id": "AIRTABLE-ADVANCED-PERMISSION",
+      "url": "https://youtu.be/bd2oKB9Ragg",
+      "label": "Airtable 고급권한"
+    }
+  },
+  {
+    "data": {
+      "id": "AIRTABLE-ADVANCED-PERMISSION--AIRTABLE",
+      "source": "AIRTABLE-ADVANCED-PERMISSION",
+      "target": "AIRTABLE"
+    }
   }
 ]
