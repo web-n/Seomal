@@ -1046,7 +1046,7 @@
     "data": {
       "id": "JAVA-OOP",
       "url": "https://opentutorials.org/module/4406",
-      "label": "JAVA 객체 지향 프로그래밍"
+      "label": "JAVA Object Oriented Programming"
     } 
   },
   {
@@ -1279,6 +1279,20 @@
       "id": "AIRTABLE-ADVANCED-PERMISSION--AIRTABLE",
       "source": "AIRTABLE-ADVANCED-PERMISSION",
       "target": "AIRTABLE"
+    }
+  },
+  {
+    "data": {
+      "id": "JAVA-INHERITANCE",
+      "url": "https://opentutorials.org/module/4870",
+      "label": "Java Inheritance"
+    }
+  },
+  {
+    "data": {
+      "id": "JAVA-INHERITANCE--JAVA-OOP",
+      "source": "JAVA-INHERITANCE",
+      "target": "JAVA-OOP"
     }
   }
 ]
