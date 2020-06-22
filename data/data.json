@@ -1294,5 +1294,19 @@
       "source": "JAVA-INHERITANCE",
       "target": "JAVA-OOP"
     }
+  },
+  {
+    "data": {
+      "id": "JAVA-INTERFACE",
+      "url": "https://opentutorials.org/module/4872",
+      "label": "Java Interface"
+    }
+  },
+  {
+    "data": {
+      "id": "JAVA-INTERFACE--JAVA-OOP",
+      "source": "JAVA-INTERFACE",
+      "target": "JAVA-OOP"
+    }
   }
 ]
