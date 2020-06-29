@@ -1309,4 +1309,19 @@
       "target": "JAVA-OOP"
     }
   }
+,
+  {
+    "data": {
+      "id": "JAVA-EXCEPTION",
+      "url": "https://opentutorials.org/module/4874",
+      "label": "Java Exception"
+    }
+  },
+  {
+    "data": {
+      "id": "JAVA-EXCEPTION--JAVA1",
+      "source": "JAVA-EXCEPTION",
+      "target": "JAVA1"
+    }
+  }
 ]
