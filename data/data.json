@@ -1323,5 +1323,19 @@
       "source": "JAVA-EXCEPTION",
       "target": "JAVA1"
     }
+  },
+  {
+    "data": {
+      "id": "GIT-FLOW-MODEL",
+      "url": "https://youtu.be/EzcF6RX8RrQ",
+      "label": "git flow model"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT-FLOW-MODEL--GIT3-CLI-BRANCH_CONFLICT",
+      "source": "GIT-FLOW-MODEL",
+      "target": "GIT3-CLI-BRANCH_CONFLICT"
+    }
   }
 ]
