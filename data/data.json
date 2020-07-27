@@ -1337,5 +1337,19 @@
       "source": "GIT-FLOW-MODEL",
       "target": "GIT3-CLI-BRANCH_CONFLICT"
     }
+  },
+  {
+    "data": {
+      "id": "GIT-REFLOG",
+      "url": "https://www.youtube.com/watch?v=1OihCn5BoT4",
+      "label": "git reflog"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT-REFLOG--GIT2-CLI-VERSION-CONTROL",
+      "source": "GIT-REFLOG",
+      "target": "GIT2-CLI-VERSION-CONTROL"
+    }
   }
 ]
