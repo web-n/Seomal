@@ -1351,5 +1351,33 @@
       "source": "GIT-REFLOG",
       "target": "GIT2-CLI-VERSION-CONTROL"
     }
+  },
+  {
+    "data": {
+      "id": "MACHINE-LEARNING-1",
+      "url": "https://opentutorials.org/course/4548",
+      "label": "Machine learning 1"
+    }
+  },
+  {
+    "data": {
+      "id": "ORANGE3",
+      "url": "https://opentutorials.org/module/4967",
+      "label": "Orange 3"
+    }
+  },
+  {
+    "data": {
+      "id": "TENSORFLOW1",
+      "url": "https://opentutorials.org/module/4966",
+      "label": "Tensorflow 1"
+    }
+  },
+  {
+    "data": {
+      "id": "TENSORFLOW1--MACHINE-LEARNING-1",
+      "source": "TENSORFLOW1",
+      "target": "MACHINE-LEARNING-1"
+    }
   }
 ]
