@@ -1379,5 +1379,26 @@
       "source": "TENSORFLOW1",
       "target": "MACHINE-LEARNING-1"
     }
+  },
+  {
+    "data": {
+      "id": "ORANGE3-SUPERVISED",
+      "url": "https://opentutorials.org/course/4569",
+      "label": "ORANGE3 지도학습"
+    }
+  },
+  {
+    "data": {
+      "id": "ORANGE3-SUPERVISED--MACHINE-LEARNING-1",
+      "source": "ORANGE3-SUPERVISED",
+      "target": "MACHINE-LEARNING-1"
+    }
+  },
+  {
+    "data": {
+      "id": "ORANGE3-SUPERVISED--ORANGE3",
+      "source": "ORANGE3-SUPERVISED",
+      "target": "ORANGE3"
+    }
   }
 ]
