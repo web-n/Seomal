@@ -1400,5 +1400,26 @@
       "source": "ORANGE3-SUPERVISED",
       "target": "ORANGE3"
     }
+  },
+  {
+    "data": {
+      "id": "TEACHABLE-MACHINE-AND-WEB",
+      "url": "https://opentutorials.org/course/4578",
+      "label": "Teachable machine & WEB"
+    }
+  },
+  {
+    "data": {
+      "id": "TEACHABLE-MACHINE-AND-WEB--MACHINE-LEARNING-1",
+      "source": "TEACHABLE-MACHINE-AND-WEB",
+      "target": "MACHINE-LEARNING-1"
+    }
+  },
+  {
+    "data": {
+      "id": "TEACHABLE-MACHINE-AND-WEB--ORANGE3",
+      "source": "TEACHABLE-MACHINE-AND-WEB",
+      "target": "WEB2JAVASCRIPT"
+    }
   }
 ]
