@@ -1421,5 +1421,33 @@
       "source": "TEACHABLE-MACHINE-AND-WEB",
       "target": "WEB2JAVASCRIPT"
     }
+  },
+  {
+    "data": {
+      "id": "GIT-PATCH",
+      "url": "https://www.youtube.com/watch?v=BLm0zsK3K_I",
+      "label": "GIT Patch"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT-PATCH--GIT4-CLI-COLLABORATION",
+      "source": "GIT-PATCH",
+      "target": "GIT4-CLI-COLLABORATION"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT-GITHUB--PULL-REQUEST",
+      "url": "https://opentutorials.org/module/5083",
+      "label": "github.com - Pull request"
+    }
+  },
+  {
+    "data": {
+      "id": "GIT-GITHUB--PULL-REQUEST--GIT4-CLI-COLLABORATION",
+      "source": "GIT-GITHUB--PULL-REQUEST",
+      "target": "GIT4-CLI-COLLABORATION"
+    }
   }
 ]
