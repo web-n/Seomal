@@ -1449,5 +1449,19 @@
       "source": "GIT-GITHUB--PULL-REQUEST",
       "target": "GIT4-CLI-COLLABORATION"
     }
+  },
+  {
+    "data": {
+      "id": "TMUX",
+      "url": "https://youtu.be/iTyjTM4Gujg",
+      "label": "Tmux"
+    }
+  },
+  {
+    "data": {
+      "id": "POSIX-CLI1--TMUX",
+      "source": "TMUX",
+      "target": "POSIX-CLI1"
+    }
   }
 ]
