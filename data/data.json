@@ -1477,5 +1477,19 @@
       "source": "CSS-POSITION",
       "target": "WEB2CSS"
     }
+  },
+  {
+    "data": {
+      "id": "AWS-EC2",
+      "url": "https://www.youtube.com/watch?v=Pv2yDJ2NKQA",
+      "label": "EC2"
+    }
+  },
+  {
+    "data": {
+      "id": "AWS1--AWS-EC2",
+      "source": "AWS-EC2",
+      "target": "AWS1"
+    }
   }
 ]
